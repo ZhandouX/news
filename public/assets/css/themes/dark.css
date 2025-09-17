@@ -1,0 +1,2142 @@
+/* ==================================================== */
+/* ===================== DARK MODE ==================== */
+/* ==================================================== */
+:root[data-bs-theme="dark"] {
+    --bs-body-bg: #151527;
+    --bs-body-color: #e1e1e1;
+    --bs-card-bg: #2a2a3c;
+    --bs-card-border-color: #1d2650;
+    --bs-navbar-bg: #1d2650;
+    --bs-sidebar-bg: #1d2650;
+    --bs-btn-bg: #1d2650;
+    --bs-btn-color: #fff;
+    --bs-table-bg: #2a2a3c;
+    --bs-table-color: #e1e1e1;
+    --bs-dropdown-bg: #2b2b3c;
+    --bs-dropdown-color: #fff;
+    --bs-primary: #1d2650;
+    --bs-accent: #ffcb01;
+    --bs-success: #198754;
+    --bs-danger: #F95F53;
+    --bs-info: #0dcaf0;
+    --bs-primary-hv: #001c9b;
+    --bs-accent-hv: #ffcc015e;
+    --bs-btn-rekab: linear-gradient(135deg, #1d2650 0%, rgb(7, 42, 200) 100%);
+    --bs-bg-gradient: linear-gradient(90deg, #151527 0%, #142881, rgb(6, 23, 99) 100%);
+    --bs-bg-gradient-card: linear-gradient(90deg, #151527 0%, #151527, rgb(6, 23, 99) 100%);
+}
+
+/* Body & Main Content */
+[data-bs-theme="dark"] body,
+[data-bs-theme="dark"] .main-panel,
+[data-bs-theme="dark"] .content-wrapper {
+    background: var(--bs-body-bg) !important;
+    /* background: url(../images/bg-kemenkum.jpg) !important; */
+    color: var(--bs-body-color) !important;
+}
+
+[data-bs-theme="dark"] nav.navbar {
+    background: var(--bs-navbar-bg);
+}
+
+/* ================================================== */
+/* ===================== NAVBAR ===================== */
+/* ================================================== */
+
+/* DATE PICKER */
+[data-bs-theme="dark"] nav.navbar.default-layout .navbar-date-picker input {
+    background-color: var(--bs-primary) !important;
+    color: #e1e1e1 !important;
+}
+
+[data-bs-theme="dark"] nav.navbar.default-layout .navbar-date-picker span {
+    color: #e1e1e1 !important;
+    background: var(--bs-primary) !important;
+}
+
+[data-bs-theme="dark"] nav.navbar.default-layout .navbar-menu-wrapper .nav-item .nav-link img {
+    border: 2px solid var(--bs-body-color) !important;
+    filter: brightness(1.1);
+    box-shadow:  0 6px 18px rgba(255, 255, 255, 0.25);
+}
+
+[data-bs-theme="dark"] nav.navbar.default-layout .navbar-menu-wrapper .nav-item .nav-link img:hover {
+    border: 2px solid var(--bs-accent) !important;
+    filter: brightness(1.1);
+    box-shadow: 0 6px 18px rgba(255, 234, 1, 0.25);
+}
+
+/* =============================================================================== */
+/* ==================== DROPDOWN CATEGORY, SUMBER, UNIT UTAMA ==================== */
+/* =============================================================================== */
+[data-bs-theme="dark"] nav.navbar.default-layout .dropdown-menu {
+    background-color: #2b2b2b !important;
+    color: #e1e1e1 !important;
+}
+
+[data-bs-theme="dark"] nav.navbar.default-layout .dropdown-menu .dropdown-item {
+    color: #e1e1e1 !important;
+}
+
+[data-bs-theme="dark"] nav.navbar.default-layout .dropdown-menu .dropdown-item:hover,
+[data-bs-theme="dark"] nav.navbar.default-layout .custom-submenu .dropdown-item:hover {
+    background-color: var(--bs-accent-hv) !important;
+    color: #fff !important;
+}
+
+[data-bs-theme="dark"] nav.navbar.default-layout .dropdown-menu .custom-submenu {
+    background: transparent !important;
+    color: #e1e1e1 !important;
+    border-color: #444 !important;
+}
+
+/* === Hilangkan caret default Bootstrap === */
+.dropdown-toggle::after {
+    display: none !important;
+}
+
+/* === Dropdown utama (Pilih Kategori) === */
+[data-bs-theme="dark"] #categoryDropdown {
+    background-color: #2a2a3c;
+    color: #e1e1e1;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Saat hover */
+[data-bs-theme="dark"] #categoryDropdown:hover {
+    background-color: var(--bs-accent);
+    color: var(--bs-primary);
+}
+
+/* Icon dropdown utama */
+[data-bs-theme="dark"] #categoryDropdown .dropdown-icon {
+    color: #e1e1e1;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Saat dropdown aktif, icon berputar */
+[data-bs-theme="dark"] .nav-item.show #categoryDropdown .dropdown-icon {
+    transform: rotate(180deg);
+    color: var(--bs-primary);
+}
+
+/* === Submenu icon (mdi-chevron-right) === */
+[data-bs-theme="dark"] .custom-submenu-toggle .submenu-icon {
+    color: #aaa;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Saat hover pada submenu */
+[data-bs-theme="dark"] .custom-submenu-toggle:hover .submenu-icon {
+    color: var(--bs-accent);
+    transform: translateX(4px);
+}
+
+/* Saat submenu aktif */
+[data-bs-theme="dark"] .dropdown-menu .custom-submenu.show + .submenu-icon {
+    transform: rotate(90deg);
+    color: var(--bs-primary);
+}
+
+
+[data-bs-theme="dark"] nav.navbar.default-layout {
+    background-color: var(--bs-navbar-bg) !important;
+    color: var(--bs-body-color) !important;
+}
+
+[data-bs-theme="dark"] nav.navbar.default-layout>* {
+    background-color: var(--bs-primary) !important;
+    color: var(--bs-body-color) !important;
+}
+
+[data-bs-theme="dark"] nav.navbar.default-layout .navbar-nav .nav-link,
+[data-bs-theme="dark"] nav.navbar.default-layout .navbar-nav h3,
+[data-bs-theme="dark"] nav.navbar.default-layout .navbar-nav .nav-item .search-form input {
+    background: transparent !important;
+    color: #e1e1e1 !important;
+}
+
+[data-bs-theme="dark"] nav.navbar.default-layout .navbar-nav .navbar-date-picker span {
+    color: var(--bs-body-color) !important;
+}
+
+[data-bs-theme="dark"] nav.navbar.default-layout span,
+[data-bs-theme="dark"] nav.navbar.default-layout strong,
+[data-bs-theme="dark"] nav.navbar.default-layout strong i {
+    background: transparent !important;
+    color: var(--bs-accent) !important;
+}
+
+[data-bs-theme="dark"] nav.navbar.default-layout .navbar-nav .nav-link:hover {
+    color: var(--bs-accent) !important;
+}
+
+[data-bs-theme="dark"] nav.navbar.default-layout .nav-link.dropdown-bordered {
+    background-color: var(--bs-primary) !important;
+    color: #fff !important;
+}
+
+[data-bs-theme="dark"] nav.navbar.default-layout .nav-link.dropdown-bordered:hover {
+    background-color: #bbbbc6 !important;
+    color: var(--bs-primary) !important;
+}
+
+[data-bs-theme="dark"] nav.navbar.default-layout .nav-link.dropdown-bordered i:hover {
+    color: var(--bs-primary) !important;
+}
+
+[data-bs-theme="dark"] nav.navbar.default-layout .dropdown-menu {
+    background-color: var(--bs-dropdown-bg) !important;
+    color: var(--bs-dropdown-color) !important;
+    border-color: var(--bs-primary) !important;
+}
+
+
+[data-bs-theme="dark"] nav.navbar.default-layout .custom-submenu p {
+    background: transparent !important;
+}
+
+[data-bs-theme="dark"] nav.navbar.default-layout .dropdown-item {
+    background-color: var(--bs-card-bg) !important;
+    color: #fff !important;
+}
+
+[data-bs-theme="dark"] nav.navbar.default-layout .dropdown-item p {
+    background: transparent !important;
+    color: var(--bs-dropdown-color) !important;
+}
+
+[data-bs-theme="dark"] nav.navbar.default-layout .dropdown-toggle .preview-item-content p {
+    background: transparent !important;
+}
+
+[data-bs-theme="dark"] nav.navbar.default-layout .dropdown-item:hover {
+    background-color: var(--bs-accent) !important;
+    color: var(--bs-primary) !important;
+}
+
+/* ========================================================== */
+/* ==================== PROFILE DROPDOWN ==================== */
+/* ========================================================== */
+[data-bs-theme="dark"] nav.navbar.default-layout .navbar-menu-wrapper .nav-item.dropdown .dropdown-menu button.logout-btn, 
+[data-bs-theme="dark"] nav.navbar.default-layout .navbar-menu-wrapper .nav-item.dropdown .dropdown-menu button.logout-btn i {
+    color: var(--bs-danger) !important;
+    text-shadow: 0 4px 12px rgba(251, 84, 84, 0.358) !important;
+    filter: brightness(1.1) !important;
+}
+
+[data-bs-theme="dark"] nav.navbar.default-layout .navbar-menu-wrapper .nav-item.dropdown .dropdown-menu button.logout-btn:hover, 
+[data-bs-theme="dark"] nav.navbar.default-layout .navbar-menu-wrapper .nav-item.dropdown .dropdown-menu button.logout-btn i:hover {
+    color: var(--bs-danger) !important;
+    text-shadow: 0 4px 12px rgba(251, 84, 84, 0.358) !important;
+    filter: brightness(1.1) !important;
+}
+
+/* ========================================= */
+/* ================ CALENDAR =============== */
+/* ========================================= */
+
+/* Kalender utama */
+[data-bs-theme="dark"] .flatpickr-calendar {
+    background-color: #2b2b3c !important;
+    /* dark background */
+    color: #e1e1e1 !important;
+    border: 1px solid #444 !important;
+    font-family: "Arial", sans-serif;
+    z-index: 9999;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* =================================== */
+/* ============ FLATPICKR ============ */
+/* =================================== */
+
+/* Header utama */
+[data-bs-theme="dark"] .flatpickr-calendar .flatpickr-months {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 0.5rem 0.75rem !important;
+    background-color: var(--bs-primary) !important;
+    border-bottom: 1px solid #444 !important;
+    border-color: var(--bs-accent) !important;
+    height: 60px !important;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 2;
+}
+
+/* Hilangkan background biru bawaan */
+[data-bs-theme="dark"] .flatpickr-calendar .flatpickr-month,
+[data-bs-theme="dark"] .flatpickr-calendar .flatpickr-month::before,
+[data-bs-theme="dark"] .flatpickr-calendar .flatpickr-month::after {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* Tengah: teks bulan dan tahun */
+[data-bs-theme="dark"] .flatpickr-calendar .flatpickr-current-month {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 0.5rem;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    color: #e1e1e1 !important;
+    text-transform: capitalize;
+    margin: 0;
+    flex-grow: 1;
+    text-align: center;
+    position: relative;
+}
+
+/* Dropdown bulan */
+[data-bs-theme="dark"] .flatpickr-calendar .flatpickr-monthDropdown-months {
+    background-color: transparent !important;
+    border: none !important;
+    color: #e1e1e1 !important;
+    border-radius: 6px;
+    padding: 0.25rem 0.5rem !important;
+    font-size: 0.95rem !important;
+    outline: none;
+    transition: border 0.2s ease-in-out, background 0.2s ease-in-out;
+    min-width: 110px;
+    cursor: pointer;
+}
+
+[data-bs-theme="dark"] .flatpickr-calendar .flatpickr-monthDropdown-months:hover {
+    border-color: #ffcb01 !important;
+    background-color: #333344 !important;
+}
+
+[data-bs-theme="dark"] .flatpickr-calendar .flatpickr-monthDropdown-months option {
+    background: var(--bs-primary) !important;
+    color: #e1e1e1 !important;
+}
+
+/* Input tahun */
+[data-bs-theme="dark"] .flatpickr-calendar .flatpickr-current-month input.cur-year {
+    background: transparent !important;
+    border: none !important;
+    color: #e1e1e1 !important;
+    padding: 0.25rem 0.5rem !important;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    width: 65px;
+    text-align: center;
+    outline: none;
+    transition: border 0.2s ease-in-out, background 0.2s ease-in-out;
+}
+
+/* Efek fokus input tahun */
+[data-bs-theme="dark"] .flatpickr-calendar .flatpickr-current-month input.cur-year:focus {
+    border-color: #ffcb01 !important;
+    background: #333344 !important;
+}
+
+/* Hilangkan wrapper biru di tahun */
+[data-bs-theme="dark"] .flatpickr-calendar .flatpickr-months .numInputWrapper {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* Tombol navigasi prev/next */
+[data-bs-theme="dark"] .flatpickr-calendar .flatpickr-prev-month,
+[data-bs-theme="dark"] .flatpickr-calendar .flatpickr-next-month {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 32px;
+    height: 32px;
+    color: #ffcb01 !important;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+}
+
+/* Efek hover tombol navigasi */
+[data-bs-theme="dark"] .flatpickr-calendar .flatpickr-prev-month:hover,
+[data-bs-theme="dark"] .flatpickr-calendar .flatpickr-next-month:hover {
+    background: rgba(255, 203, 1, 0.15) !important;
+}
+
+/* Ikon panah di dalam tombol navigasi */
+[data-bs-theme="dark"] .flatpickr-calendar .flatpickr-prev-month svg,
+[data-bs-theme="dark"] .flatpickr-calendar .flatpickr-next-month svg {
+    fill: #ffcb01 !important;
+    width: 18px;
+    height: 18px;
+}
+
+/* Nama hari (Sen, Sel, Rab, dst) */
+[data-bs-theme="dark"] .flatpickr-calendar .flatpickr-weekday {
+    color: #e1e1e1 !important;
+    font-weight: 500 !important;
+    background: #1e1e2a !important;
+    padding: 0.5rem 0 !important;
+    border-bottom: 1px solid #444 !important;
+}
+
+/* Grid tanggal */
+[data-bs-theme="dark"] .flatpickr-calendar .flatpickr-days {
+    background: #2b2b3c !important;
+}
+
+[data-bs-theme="dark"] .flatpickr-calendar .flatpickr-day {
+    background: transparent !important;
+    color: #e1e1e1 !important;
+    transition: all 0.2s ease-in-out;
+    margin: 2px;
+}
+
+/* Hover & selected state */
+[data-bs-theme="dark"] .flatpickr-calendar .flatpickr-day:hover {
+    background: #3a3a3a !important;
+    color: #ffcb01 !important;
+    cursor: pointer;
+}
+
+[data-bs-theme="dark"] .flatpickr-calendar .flatpickr-day.selected {
+    background-color: var(--bs-accent) !important;
+    color: #1e1e2a !important;
+    font-weight: 600;
+}
+
+/* Tanggal yang bukan di bulan aktif */
+[data-bs-theme="dark"] .flatpickr-calendar .flatpickr-day.flatpickr-disabled,
+[data-bs-theme="dark"] .flatpickr-calendar .flatpickr-day.prevMonthDay,
+[data-bs-theme="dark"] .flatpickr-calendar .flatpickr-day.nextMonthDay {
+    opacity: 0.3 !important;
+    background: transparent !important;
+    color: var(--bs-body-color) !important;
+}
+
+/* Footer / time picker (jika ada) */
+[data-bs-theme="dark"] .flatpickr-calendar .flatpickr-time {
+    background-color: #2b2b3c !important;
+    color: #e1e1e1 !important;
+    border-top: 1px solid #444 !important;
+}
+
+/* Scrollbar */
+/* [data-bs-theme="dark"] .flatpickr-calendar::-webkit-scrollbar {
+    width: 6px;
+}
+
+[data-bs-theme="dark"] .flatpickr-calendar::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 3px;
+}
+
+[data-bs-theme="dark"] .flatpickr-calendar::-webkit-scrollbar-track {
+    background: #2b2b3c;
+} */
+
+
+/* ============================================================= */
+/* ======================= USER DROPDOWN ======================= */
+/* ============================================================= */
+
+[data-bs-theme="dark"] nav.navbar.default-layout .user-dropdown .dropdown-menu .dropdown-header {
+    background-color: var(--bs-primary) !important;
+    color: #e1e1e1 !important;
+    border-color: #444 !important;
+    border-bottom: 2px solid var(--bs-accent) !important;
+    border-top: 1px solid var(--bs-body-color) !important;
+}
+
+/* Header dropdown */
+[data-bs-theme="dark"] nav.navbar.default-layout .user-dropdown .dropdown-header {
+    background: transparent !important;
+    color: #e1e1e1 !important;
+    text-align: center;
+}
+
+/* Body dropdown */
+[data-bs-theme="dark"] nav.navbar.default-layout .user-dropdown .nav-item .dropdown-menu .dropdown-item {
+    background-color: var(--bs-card-bg) !important;
+}
+
+/* Nama dan email */
+[data-bs-theme="dark"] nav.navbar.default-layout .user-dropdown .dropdown-header p {
+    color: #e1e1e1 !important;
+}
+
+/* Garis pemisah */
+[data-bs-theme="dark"] nav.navbar.default-layout .user-dropdown hr {
+    border-color: #e1e1e1 !important;
+}
+
+/* Link dropdown */
+[data-bs-theme="dark"] nav.navbar.default-layout .user-dropdown .dropdown-item {
+    background: transparent !important;
+    color: var(--bs-accent) !important;
+}
+
+/* Hover link dropdown */
+[data-bs-theme="dark"] nav.navbar.default-layout .user-dropdown .dropdown-item:hover {
+    background-color: #3a3a3a !important;
+    color: var(--bs-accent) !important;
+}
+
+/* Icon di dropdown */
+[data-bs-theme="dark"] nav.navbar.default-layout .user-dropdown .dropdown-item i {
+    color: var(--bs-accent) !important;
+}
+
+/* ====================================================== */
+/* ======================= SEARCH ======================= */
+/* ====================================================== */
+[data-bs-theme="dark"] nav.navbar.default-layout input,
+[data-bs-theme="dark"] nav.navbar.default-layout select,
+[data-bs-theme="dark"] nav.navbar.default-layout textarea {
+    background-color: #2a2a3c;
+    color: #e1e1e1 !important;
+    border-color: var(--bs-primary) !important;
+}
+
+/* SEARCH ICON */
+[data-bs-theme="dark"] nav.navbar.default-layout .nav-item .search-form i {
+    color: var(--bs-btn-color) !important;
+}
+
+[data-bs-theme="dark"] nav.navbar a.navbar-brand img {
+    height: 50px !important;
+    width: auto !important;
+}
+
+[data-bs-theme="dark"] nav.navbar.default-layout input:focus {
+    border-color: var(--bs-accent) !important;
+    box-shadow: none !important;
+}
+
+[data-bs-theme="dark"] nav.navbar.default-layout input::placeholder,
+[data-bs-theme="dark"] nav.navbar.default-layout textarea::placeholder {
+    color: #aaa !important;
+}
+
+/* Badge */
+[data-bs-theme="dark"] nav.navbar.default-layout .badge {
+    background-color: var(--bs-accent) !important;
+    color: #000 !important;
+}
+
+/* =================================================== */
+/* ===================== SIDEBAR ===================== */
+/* =================================================== */
+[data-bs-theme="dark"] .sidebar {
+    background-color: var(--bs-sidebar-bg) !important;
+    color: var(--bs-body-color) !important;
+    border-right: 3px solid var(--bs-accent);
+}
+
+[data-bs-theme="dark"] .sidebar .nav .nav-item .nav-link,
+[data-bs-theme="dark"] .sidebar .nav .nav-item,
+[data-bs-theme="dark"] .sidebar .nav .nav-item .nav-link i {
+    color: #ddd !important;
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    overflow: hidden; /* Agar efek background tetap di dalam */
+    z-index: 1;
+}
+
+/* Layer untuk efek slide */
+[data-bs-theme="dark"] .sidebar .nav .nav-item .nav-link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%; /* Mulai di luar kiri */
+    width: 100%;
+    height: 100%;
+    background-color: var(--bs-accent);
+    z-index: -1; /* Agar background di bawah teks */
+    transition: left 0.4s ease-in-out;
+}
+
+/* Hover efek */
+[data-bs-theme="dark"] .sidebar .nav .nav-item .nav-link:hover::before {
+    left: 0; /* Bergerak masuk dari kiri ke kanan */
+}
+
+[data-bs-theme="dark"] .sidebar .nav .nav-item .nav-link:hover {
+    color: var(--bs-primary) !important;
+    border: 1px solid var(--bs-accent);
+    transform: translateX(15px);
+    filter: brightness(1.1);
+}
+
+
+[data-bs-theme="dark"] .sidebar .nav .nav-item .nav-link:hover i,
+[data-bs-theme="dark"] .sidebar .nav .nav-item .nav-link:hover span {
+    color: var(--bs-primary) !important;
+}
+
+[data-bs-theme="dark"] .sidebar .nav .nav-item.active .nav-link:hover span {
+    color: var(--bs-primary) !important;
+}
+
+[data-bs-theme="dark"] .sidebar .nav .nav-item.active .nav-link {
+    background-color: var(--bs-accent) !important;
+    color: var(--bs-primary) !important;
+}
+
+[data-bs-theme="dark"] .sidebar .nav .nav-item.active .nav-link i {
+    color: var(--bs-primary) !important;
+}
+
+/* =================================================== */
+/* ====================== CARDS ====================== */
+/* =================================================== */
+[data-bs-theme="dark"] .card,
+[data-bs-theme="dark"] .card textarea,
+[data-bs-theme="dark"] .card.card-rounded,
+[data-bs-theme="dark"] .modal .card .card-body {
+    background: linear-gradient(145deg, #2a2a3c, #1e1e2d) !important;
+    color: var(--bs-body-color) !important;
+    border-color: var(--bs-primary) !important;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+}
+
+[data-bs-theme="dark"] .news-create-card .form-news-create-card label {
+    background: transparent !important;
+}
+
+/* ==================== FORM CREATE ==================== */
+[data-bs-theme="dark"] .news-create-card .form-news-create-card select,
+[data-bs-theme="dark"] .news-create-card .form-news-create-card textarea,
+[data-bs-theme="dark"] .news-create-card .form-news-create-card input,
+[data-bs-theme="dark"] .news-create-card .form-news-create-card input.input-news-images {
+    border-color: #929292 !important;
+}
+
+[data-bs-theme="dark"] .news-create-card .card-container .header-create-card h4 {
+    background: transparent !important;
+}
+
+/* ICON NEWS CREATE */
+[data-bs-theme="dark"] .news-create-card i.mdi-file-doccument-plus {
+    color: var(--bs-accent) !important;
+}
+
+[data-bs-theme="dark"] #drop-zone {
+    background-color: transparent !important;
+}
+[data-bs-theme="dark"] #drop-zone:hover {
+    background-color: rgba(1, 41, 121, 0.416) !important;
+}
+
+[data-bs-theme="dark"] .card h4,
+[data-bs-theme="dark"] .card h5 {
+    background: transparent !important;
+    color: var(--bs-body-color) !important;
+}
+
+[data-bs-theme="dark"] .content-wrapper h3 strong {
+    color: var(--bs-accent) !important;
+}
+
+[data-bs-theme="dark"] .content-wrapper hr {
+    color: var(--bs-body-color);
+    line-height: 5px;
+    width: 250px;
+}
+
+[data-bs-theme="dark"] hr {
+    color: var(--bs-body-color) !important;
+    width: 100% !important;
+    height: 2px !important;
+}
+
+[data-bs-theme="dark"] .card:hover {
+    border-color: var(--bs-card-border-color) !important;
+}
+
+[data-bs-theme="dark"] .dark-theme,
+[data-bs-theme="dark"] .dark-theme label,
+[data-bs-theme="dark"] .dark-theme h4 {
+    background: linear-gradient(145deg, #2a2a3c, #1e1e2d) !important;
+    color: #fff;
+}
+
+/* =================================================== */
+/* ===================== BUTTONS ===================== */
+/* =================================================== */
+[data-bs-theme="dark"] .btn {
+    background: var(--bs-btn-bg) !important;
+    color: var(--bs-btn-color) !important;
+    border: 1px solid rgba(255,255,255,0.2) !important;
+    border-radius: 15px;
+    padding: 12px 24px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(15px);
+    position: relative;
+    overflow: hidden;
+}
+
+[data-bs-theme="dark"] .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 1s ease;
+}
+
+[data-bs-theme="dark"] .btn:hover::before {
+    left: 100%;
+}
+
+[data-bs-theme="dark"] .btn:hover {
+    background: var(--bs-accent) !important;
+    color: #ffffff !important;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(250, 112, 154, 0.4);
+}
+
+/* ==================== BTN-PRIMARY ==================== */
+[data-bs-theme="dark"] .btn-primary {
+    background-color: var(--bs-primary) !important;
+    color: var(--bs-accent) !important;
+    border: none !important;
+    border-radius: 12px;
+    padding: 0.6rem 1.4rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+[data-bs-theme="dark"] .btn-primary:hover {
+    background-color: var(--bs-accent) !important;
+    color: #000 !important;
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+    box-shadow: 0 6px 18px rgba(255, 255, 255, 0.25);
+}
+
+/* ==================== BTN-DANGER ==================== */
+[data-bs-theme="dark"] .btn-danger {
+    background-color: var(--bs-danger) !important;
+    color: #ffffff !important;
+    border: 1px solid var(--bs-danger) !important;
+    border-radius: 12px;
+    padding: 0.6rem 1.4rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 12px rgba(125, 40, 40, 0.25);
+}
+
+[data-bs-theme="dark"] .btn-danger:hover {
+    background-color: transparent !important;
+    color: var(--bs-danger) !important;
+    border: 1px solid var(--bs-danger) !important;
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+    box-shadow: 0 6px 18px rgba(125, 40, 40, 0.25);
+}
+
+/* ==================== BTN-SUCCESS ==================== */
+[data-bs-theme="dark"] .btn-success {
+    background: var(--bs-success) !important;
+    color: #fff !important;
+    border: none !important;
+    border-radius: 12px;
+    padding: 0.6rem 1.4rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+[data-bs-theme="dark"] .btn-success:hover {
+    background: transparent !important;
+    color: var(--bs-success) !important;
+    border: 1px solid var(--bs-success) !important;
+    transform: translateY(-2px);
+    filter: brightness(1.05);
+    box-shadow: 0 6px 18px rgba(15, 77, 1, 0.5);
+}
+
+/* ==================== BTN-WARNING ==================== */
+[data-bs-theme="dark"] .btn-warning {
+    background-color: var(--bs-warning) !important;
+    color: #1d2650 !important;
+    border: none !important;
+    border-radius: 12px;
+    padding: 0.6rem 1.4rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+[data-bs-theme="dark"] .btn-warning:hover {
+    background-color: var(--bs-accent) !important;
+    color: #1d2650 !important;
+    filter: brightness(1.1);
+    box-shadow: 0 6px 18px rgba(255, 255, 255, 0.25);
+}
+
+/* ==================== BTN-LIGHT ==================== */
+[data-bs-theme="dark"] .btn-light {
+    background-color: #444 !important;
+    color: #fff !important;
+    border: none !important;
+    border-radius: 12px;
+    padding: 0.6rem 1.4rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+[data-bs-theme="dark"] .btn-light:hover {
+    background-color: var(--bs-accent) !important;
+    color: #000 !important;
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+    box-shadow: 0 6px 18px rgba(255, 255, 255, 0.25);
+}
+
+/* ==================== BTN-OUTLINE-PRIMARY ==================== */
+[data-bs-theme="dark"] .btn-outline-primary {
+    background-color: transparent !important;
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+    border-radius: 12px;
+    padding: 0.6rem 1.4rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+[data-bs-theme="dark"] .btn-outline-primary:hover {
+    background-color: var(--bs-accent) !important;
+    color: var(--bs-primary) !important;
+    border-color: var(--bs-accent) !important;
+    filter: brightness(1.1);
+    box-shadow: 0 6px 18px rgba(255, 255, 255, 0.25);
+}
+
+/* ==================== BTN-OUTLINE-INFO ==================== */
+[data-bs-theme="dark"] .btn-outline-info {
+    background-color: transparent !important;
+    color: var(--bs-info) !important;
+    border: 1px solid var(--bs-info) !important;
+    border-radius: 12px;
+    padding: 0.6rem 1.4rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+[data-bs-theme="dark"] .btn-outline-info:hover {
+    background-color: var(--bs-info) !important;
+    color: #000 !important;
+    border-color: var(--bs-info) !important;
+    filter: brightness(1.1);
+    box-shadow: 0 6px 18px rgba(255, 255, 255, 0.25);
+}
+
+/* ==================== BTN-OUTLINE-DANGER ==================== */
+[data-bs-theme="dark"] .btn-outline-danger {
+    background-color: transparent !important;
+    color: var(--bs-danger) !important;
+    border: 1px solid var(--bs-danger) !important;
+    border-radius: 12px;
+    padding: 0.6rem 1.4rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+[data-bs-theme="dark"] .btn-outline-danger:hover {
+    background-color: var(--bs-danger) !important;
+    color: #fff !important;
+    border-color: var(--bs-danger) !important;
+    filter: brightness(1.1);
+    box-shadow: 0 6px 18px rgba(255, 255, 255, 0.25);
+}
+
+/* ===================================================== */
+/* ==================== BTN-WRAPPER ==================== */
+/* ===================================================== */
+
+/* ==================== BTN-WRAPPER (BTN-OUTLINE-PRIMARY) ==================== */
+[data-bs-theme="dark"] .btn-wrapper .btn.btn-outline-primary {
+    background-color: transparent !important;
+    color: var(--bs-accent) !important;
+    border-color: var(--bs-accent) !important;
+    border-radius: 12px;
+    padding: 0.6rem 1.4rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+[data-bs-theme="dark"] .btn-wrapper .btn.btn-outline-primary:hover {
+    background-color: var(--bs-accent) !important;
+    color: var(--bs-primary) !important;
+    border-color: var(--bs-accent) !important;
+    filter: brightness(1.1);
+    box-shadow: 0 6px 18px rgba(255, 255, 255, 0.25);
+}
+
+/* ============================================================ */
+/* ===================== STATISTIK BERITA ===================== */
+/* ============================================================ */
+[data-bs-theme="dark"] h3 {
+    color: #fff !important;
+}
+
+/* TITLE STATISTIK BERITA */
+[data-bs-theme="dark"] .statistics-details .statistics-title,
+[data-bs-theme="dark"] .statistics-details .rate-percentage {
+    color: #ffcb01 !important;
+}
+
+/* ICON JUMLAH BERITA */
+[data-bs-theme="dark"] .statistics-details .statistics-title i.mdi-newspaper-variant-multiple-outline {
+    color: var(--bs-accent);
+}
+
+/* ICON BERITA MINGGU INI */
+[data-bs-theme="dark"] .statistics-details .statistics-title i.mdi-calendar-week {
+    color: var(--bs-accent);
+}
+
+/* ICON BERITA BULAN INI */
+[data-bs-theme="dark"] .statistics-details .statistics-title i.mdi-calendar-month {
+    color: var(--bs-accent);
+}
+
+/* ICON BERITA BULAN LALU */
+[data-bs-theme="dark"] .statistics-details .statistics-title i.mdi-calendar-arrow-left {
+    color: var(--bs-accent);
+}
+
+/* ICON BERITA TAHUN INI */
+[data-bs-theme="dark"] .statistics-details .statistics-title i.mdi-calendar-blank {
+    color: var(--bs-accent);
+}
+
+/* ICON REKAP BERITA */
+[data-bs-theme="dark"] .modern-form-card .card-title i {
+    color: var(--bs-accent) !important;
+}
+
+/* ICON LIST BERITA */
+[data-bs-theme="dark"] .modern-list-card .card-title i {
+    color: var(--bs-accent) !important;
+}
+
+/* ================================================== */
+/* ===================== TABLES ===================== */
+/* ================================================== */
+[data-bs-theme="dark"] table,
+[data-bs-theme="dark"] tr,
+[data-bs-theme="dark"] td,
+[data-bs-theme="dark"] td h6 {
+    background-color: var(--bs-table-bg) !important;
+    color: var(--bs-table-color) !important;
+    border-color: var(--bs-primary) !important;
+}
+
+[data-bs-theme="dark"] th {
+    background-color: var(--bs-primary) !important;
+    color: var(--bs-table-color) !important;
+    border-color: var(--bs-primary) !important;
+    border-bottom: 2px solid var(--bs-accent) !important;
+}
+
+[data-bs-theme="dark"] .table.select-table thead th {
+    background-color: var(--bs-primary) !important;
+    color: #fff !important;
+}
+
+[data-bs-theme="dark"] .table tbody tr:hover {
+    background-color: rgba(255, 203, 1, 0.1) !important;
+}
+
+[data-bs-theme="dark"] .table.select-table img {
+    filter: brightness(0.8);
+}
+
+[data-bs-theme="dark"] .stretch-card .card .card-body .table-responsive .dropdown .dropdown-menu .dropdown-header {
+    background-color: var(--bs-primary) !important;
+    border-bottom: 2px solid var(--bs-accent) !important;
+}
+
+[data-bs-theme="dark"] .stretch-card .card .card-body .table-responsive .dropdown .dropdown-menu .dropdown-item:hover {
+    background-color: var(--bs-primary) !important;
+}
+
+/* REPORT TABLE */
+
+/* ===================================================== */
+/* ===================== DROPDOWNS ===================== */
+/* ===================================================== */
+[data-bs-theme="dark"] .dropdown-menu {
+    background-color: var(--bs-dropdown-bg) !important;
+    color: var(--bs-dropdown-color) !important;
+    border-color: var(--bs-primary) !important;
+}
+
+[data-bs-theme="dark"] .dropdown-item {
+    color: #fff !important;
+}
+
+[data-bs-theme="dark"] .dropdown-item:hover {
+    background-color: var(--bs-primary) !important;
+    color: var(--bs-accent) !important;
+}
+
+/* ======================================================= */
+/* ===================== FORM INPUTS ===================== */
+/* ======================================================= */
+[data-bs-theme="dark"] input,
+[data-bs-theme="dark"] select,
+[data-bs-theme="dark"] textarea {
+    background-color: #2a2a3c !important;
+    color: #e1e1e1 !important;
+    border-color: var(--bs-primary) !important;
+}
+
+[data-bs-theme="dark"] input:focus,
+[data-bs-theme="dark"] select:focus,
+[data-bs-theme="dark"] textarea:focus {
+    border-color: var(--bs-accent) !important;
+    box-shadow: 0 0 0 0.25rem rgba(255, 203, 1, 0.25) !important;
+}
+
+[data-bs-theme="dark"] input::placeholder,
+[data-bs-theme="dark"] textarea::placeholder {
+    color: #aaa !important;
+}
+
+/* ================================================================ */
+/* ===================== PROGRESS BAR & BADGE ===================== */
+/* ================================================================ */
+[data-bs-theme="dark"] .progress {
+    background-color: #444 !important;
+}
+
+[data-bs-theme="dark"] .progress-bar.bg-success {
+    background-color: var(--bs-accent) !important;
+}
+
+[data-bs-theme="dark"] .badge-secondary {
+    background-color: var(--bs-primary) !important;
+    color: #fff !important;
+}
+
+/* ========================================================= */
+/* ===================== SWITCH TOGGLE ===================== */
+/* ========================================================= */
+.form-check-input {
+    width: 2.5em;
+    height: 1.4em;
+    cursor: pointer;
+}
+
+.form-check-label {
+    margin-left: 5px;
+    font-size: 1.2em;
+}
+
+[data-bs-theme="dark"] .footer {
+    background-color: var(--bs-primary) !important;
+    color: #e1e1e1 !important;
+    border-top: 1px solid var(--bs-accent) !important;
+}
+
+[data-bs-theme="dark"] .footer span.kemenkum {
+    color: var(--bs-accent) !important;
+    font-size: 14px;
+}
+
+/* ================================================= */
+/* ===================== MODAL ===================== */
+/* ================================================= */
+[data-bs-theme="dark"] .modal .modal-dialog .modal-content .modal-body,
+[data-bs-theme="dark"] .modal .modal-dialog .modal-content .modal-body li.list-group-item {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+[data-bs-theme="dark"] .gear-bubble-wrapper .gear-popup .popup-header {
+    background-color: var(--bs-primary) !important;
+}
+
+[data-bs-theme="dark"] .modal-content {
+    background: linear-gradient(145deg, #2a2a3c, #1e1e2d) !important;
+    color: var(--bs-body-color) !important;
+    border-color: var(--bs-primary) !important;
+}
+
+[data-bs-theme="dark"] .modal-body,
+[data-bs-theme="dark"] .modal-footer {
+    background: transparent !important;
+    color: var(--bs-body-color) !important;
+    border-color: var(--bs-primary) !important;
+}
+
+[data-bs-theme="dark"] .modal-title {
+    color: #fff !important;
+}
+
+[data-bs-theme="dark"] .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%) !important;
+}
+
+/* =================== GEAR-BUBBLE-WRAPPER =================== */
+[data-bs-theme="dark"] .gear-bubble-wrapper .gear-bubble {
+    width: 55px !important;
+    height: 55px !important;
+}
+
+[data-bs-theme="dark"] .gear-bubble-wrapper .gear-bubble:hover {
+    border-bottom: 1.5px solid var(--bs-body-color) !important;
+}
+
+[data-bs-theme="dark"] .gear-bubble-wrapper .gear-popup .popup-header {
+    background-color: var(--bs-primary) !important;
+    border-bottom: 2px solid var(--bs-accent) !important;
+}
+
+[data-bs-theme="dark"] .gear-bubble-wrapper .gear-bubble .popup-header p {
+    font-weight: 600;
+}
+
+[data-bs-theme="dark"] .gear-bubble-wrapper .gear-popup .popup-body i {
+    color: var(--bs-accent) !important;
+}
+
+/* =================== MODAL REKAP BERITA =================== */
+[data-bs-theme="dark"] .modal-header {
+    border-bottom: 2px solid var(--bs-accent) !important;
+}
+
+[data-bs-theme="dark"] .modal .modal-dialog .modal-content .modal-header {
+    background-color: var(--bs-primary) !important;
+}
+
+/* ICON */
+[data-bs-theme="dark"] .modal .modal-dialog .modal-content .modal-header .modal-title i.mdi-newspaper-variant-multiple-outline {
+    color: var(--bs-accent) !important;
+}
+
+/* TITLE */
+[data-bs-theme="dark"] .modal .modal-dialog .modal-content .modal-header .modal-title strong {
+    font-weight: bold !important;
+}
+
+/* ================================================================= */
+/* ===================== DARK MODE FORM & CARD ===================== */
+/* ================================================================= */
+[data-bs-theme="dark"] .card {
+    background: linear-gradient(145deg, #2a2a3c, #1e1e2d) !important;
+    border-color: var(--bs-primary) !important;
+    color: var(--bs-body-color) !important;
+}
+
+[data-bs-theme="dark"] .card:hover {
+    border-color: var(--bs-primary-hv) !important;
+}
+
+[data-bs-theme="dark"] .card-title {
+    color: #fff !important;
+}
+
+
+
+/* NEWS TITLE */
+[data-bs-theme="dark"] .stretch-card .news-content h5 {
+    text-decoration: underline;
+}
+
+[data-bs-theme="dark"] .stretch-card .news-content h5:hover {
+    text-decoration: underline;
+    color: var(--bs-accent) !important;
+}
+
+/* NEWS DATE */
+[data-bs-theme="dark"] .stretch-card .news-content p.news-date {
+    color: var(--bs-info) !important;
+}
+
+/* ICON CHART */
+[data-bs-theme="dark"] .stretch-card i.mdi-file-document-outline {
+    color: #4dabf7 !important;
+}
+
+[data-bs-theme="dark"] .stretch-card i.mdi-chart-line {
+    color: #ff922b !important;
+}
+
+[data-bs-theme="dark"] .stretch-card i.mdi-arrow-up-bold {
+    color: #51cf66 !important;
+}
+
+[data-bs-theme="dark"] .stretch-card i.mdi-arrow-down-bold {
+    color: #ff6b6b !important;
+}
+
+[data-bs-theme="dark"] .stretch-card i.mdi-update {
+    color: var(--bs-accent);
+}
+
+/* ICON NEWS MANAGEMENT */
+[data-bs-theme="dark"] .stretch-card i.mdi-table-cog {
+    color: var(--bs-accent) !important;
+}
+
+/* ICON INFORMATION */
+[data-bs-theme="dark"] .content-wrapper i.mdi-information {
+    color: var(--bs-accent) !important;
+}
+
+/* ICON OFFICER ACCOUNTS */
+[data-bs-theme="dark"] .stretch-card i.mdi-account-hard-hat-outline {
+    color: var(--bs-accent) !important;
+}
+
+/* ICON NEWS MANAGEMENT TABLE */
+[data-bs-theme="dark"] .stretch-card i.mdi-newspaper-variant-multiple-outline {
+    color: var(--bs-accent) !important;
+}
+
+/* DATA COUNT */
+[data-bs-theme="dark"] .stretch-card span.total {
+    color: var(--bs-accent) !important;
+}
+
+[data-bs-theme="dark"] .stretch-card span.average {
+    color: var(--bs-accent) !important;
+}
+
+[data-bs-theme="dark"] .stretch-card span.up {
+    color: var(--bs-accent) !important;
+}
+
+[data-bs-theme="dark"] .stretch-card span.down {
+    color: var(--bs-accent) !important;
+}
+
+[data-bs-theme="dark"] .stretch-card span.totals {
+    color: rgb(101, 201, 105) !important;
+}
+
+/* Input & Select */
+[data-bs-theme="dark"] .form-control,
+[data-bs-theme="dark"] .form-select {
+    background-color: #2a2a3c !important;
+    border-color: var(--bs-primary) !important;
+    color: #e1e1e1 !important;
+}
+
+[data-bs-theme="dark"] .form-control:focus,
+[data-bs-theme="dark"] .form-select:focus {
+    background-color: #2f3142 !important;
+    border-color: var(--bs-accent) !important;
+    color: #fff !important;
+    box-shadow: 0 0 0 0.25rem rgba(255, 203, 1, 0.25) !important;
+}
+
+/* Label */
+[data-bs-theme="dark"] .form-label {
+    color: #ccc !important;
+}
+
+/* ================================================================= */
+/* ===================== DARK MODE MODERN FORM ===================== */
+/* ================================================================= */
+[data-bs-theme="dark"] .modern-form-card,
+[data-bs-theme="dark"] .modern-list-card,
+[data-bs-theme="dark"] .modern-news-card {
+    background: linear-gradient(145deg, #2a2a3c, #1e1e2d) !important;
+    color: #e1e1e1 !important;
+    border: 1px solid var(--bs-primary) !important;
+}
+
+[data-bs-theme="dark"] .modern-form-card:hover,
+[data-bs-theme="dark"] .modern-list-card:hover,
+[data-bs-theme="dark"] .modern-news-card:hover {
+    border-color: var(--bs-accent) !important;
+}
+
+[data-bs-theme="dark"] .modern-form-card .card-title,
+[data-bs-theme="dark"] .modern-list-card .card-title {
+    color: #fff !important;
+}
+
+/* Input & Select versi modern */
+[data-bs-theme="dark"] .modern-input,
+[data-bs-theme="dark"] .modern-select {
+    background-color: #2a2a3c !important;
+    border-color: var(--bs-body-color) !important;
+    color: #e1e1e1 !important;
+}
+
+[data-bs-theme="dark"] .modern-input:focus,
+[data-bs-theme="dark"] .modern-select:focus {
+    background-color: #2f3142 !important;
+    border-color: var(--bs-accent) !important;
+    color: #fff !important;
+    box-shadow: 0 0 0 0.25rem rgba(255, 203, 1, 0.25) !important;
+}
+
+/* Label */
+[data-bs-theme="dark"] .form-label {
+    color: #ccc !important;
+}
+
+/* ================================================================ */
+/* ===================== MAIN PANEL & CONTENT ===================== */
+/* ================================================================ */
+[data-bs-theme="dark"] .main-panel,
+[data-bs-theme="dark"] .content-wrapper {
+    background-color: #1e1e2d !important;
+    color: #e1e1e1 !important;
+}
+
+/* ==================================================== */
+/* ===================== NAV TABS ===================== */
+/* ==================================================== */
+[data-bs-theme="dark"] .nav-tabs {
+    border-bottom: 1px solid var(--bs-primary) !important;
+}
+
+/* ==================== NAV-TABS ==================== */
+[data-bs-theme="dark"] .nav-tabs .nav-link {
+    position: relative;
+    overflow: hidden; /* Agar animasi tetap di dalam area tab */
+    color: #e1e1e1 !important;
+    background-color: #2a2a3c;
+    border: 1px solid transparent;
+    transition: color 0.4s ease-in-out;
+    z-index: 1;
+}
+
+/* Layer untuk efek slide */
+[data-bs-theme="dark"] .nav-tabs .nav-link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%; /* Awalnya di luar kiri */
+    width: 100%;
+    height: 100%;
+    background-color: var(--bs-primary);
+    z-index: -1; /* Agar background berada di bawah teks */
+    transition: left 0.4s ease-in-out;
+}
+
+/* Saat hover: slide masuk dari kiri ke kanan */
+[data-bs-theme="dark"] .nav-tabs .nav-link:hover::before {
+    left: 0;
+}
+
+/* Perubahan warna teks saat hover */
+[data-bs-theme="dark"] .nav-tabs .nav-link:hover {
+    color: var(--bs-accent) !important;
+}
+
+
+[data-bs-theme="dark"] .nav-tabs .nav-link.active {
+    color: var(--bs-accent) !important;
+    background-color: transparent !important;
+    border-color: var(--bs-accent) var(--bs-accent) transparent !important;
+}
+
+/* ========================================================== */
+/* ===================== BUTTON WRAPPER ===================== */
+/* ========================================================== */
+[data-bs-theme="dark"] .btn-wrapper .btn {
+    color: #e1e1e1 !important;
+    border-color: var(--bs-primary) !important;
+}
+
+[data-bs-theme="dark"] .btn-wrapper .btn:hover {
+    background-color: var(--bs-accent) !important;
+    color: #000 !important;
+    border-color: var(--bs-accent) !important;
+}
+
+[data-bs-theme="dark"] .btn-wrapper .btn.btn-primary {
+    background-color: var(--bs-primary) !important;
+    border-color: var(--bs-primary) !important;
+    color: var(--bs-accent) !important;
+}
+
+[data-bs-theme="dark"] .btn-wrapper .btn.btn-primary:hover {
+    background-color: var(--bs-accent) !important;
+    color: var(--bs-primary) !important;
+    border-color: var(--bs-accent) !important;
+}
+
+[data-bs-theme="dark"] .btn-wrapper .btn.btn-outline-light {
+    background: transparent !important;
+    color: var(--bs-btn-color) !important;
+    border: 1px solid var(--bs-btn-color) !important;
+    border-radius: 12px;
+    padding: 0.6rem 1.4rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 12px rgba(79, 79, 79, 0.25);
+}
+
+[data-bs-theme="dark"] .btn-wrapper .btn.btn-outline-light:hover {
+    background-color: var(--bs-body-color) !important;
+    color: var(--bs-primary) !important;
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+    box-shadow: 0 6px 18px rgba(255, 255, 255, 0.25);
+}
+
+[data-bs-theme="dark"] .btn-wrapper .btn.btn-outline-dark {
+    background-color: transparent !important;
+    color: #e1e1e1 !important;
+    border-color: var(--bs-primary) !important;
+}
+
+[data-bs-theme="dark"] .btn-wrapper .btn.btn-outline-dark:hover {
+    background-color: var(--bs-accent) !important;
+    color: #000 !important;
+    border-color: var(--bs-accent) !important;
+}
+
+[data-bs-theme="dark"] .btn-wrapper .btn.btn-outline-success {
+    background: transparent !important;
+    color: #20a868 !important;
+    border-color: #20a868 !important;
+}
+
+[data-bs-theme="dark"] .btn-wrapper .btn.btn-outline-success:hover {
+    background: #20a868 !important;
+    color: #ffffff !important;
+    border-color: #20a868 !important;
+}
+
+/* ===================== PROFILE SECTION ===================== */
+[data-bs-theme="dark"] .profile-section {
+    background-color: transparent !important;
+    color: #e1e1e1 !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Header Profil */
+[data-bs-theme="dark"] .profile-header h2,
+[data-bs-theme="dark"] .profile-content h3,
+[data-bs-theme="dark"] .profile-header p {
+    color: #e1e1e1 !important;
+}
+
+[data-bs-theme="dark"] .profile-section .profile-content .profile-card .card-body form {
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* Card Profil */
+[data-bs-theme="dark"] .profile-card {
+    background: linear-gradient(145deg, #2a2a3c, #1d2650) !important;
+    border: 1px solid var(--bs-primary) !important;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    color: #e1e1e1 !important;
+}
+
+[data-bs-theme="dark"] .profile-card:hover {
+    border-color: var(--bs-accent) !important;
+}
+
+/* Header Card */
+[data-bs-theme="dark"] .profile-card .card-header {
+    background-color: var(--bs-primary) !important;
+    border-bottom: 1px solid var(--bs-accent) !important;
+    color: #fff !important;
+    padding: 10px 15px;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Body Card */
+[data-bs-theme="dark"] .profile-card .card-body {
+    background: linear-gradient(145deg, #2a2a3c, #1e1e2d) !important;
+    color: #e1e1e1 !important;
+}
+
+/* Special Danger Card (Hapus Akun) */
+[data-bs-theme="dark"] .profile-card.danger {
+    background: linear-gradient(145deg, #3b1f1f, #2a1a1a) !important;
+    border: 1px solid #a94442 !important;
+}
+
+[data-bs-theme="dark"] .profile-card.danger:hover {
+    border-color: #ff6b6b !important;
+}
+
+[data-bs-theme="dark"] .profile-card.danger .card-header {
+    background-color: #5c2a2a !important;
+    color: #ffb3b3 !important;
+}
+
+/* ===================== DARK MODE - PASSWORD FORM ===================== */
+[data-bs-theme="dark"] #password-form {
+    background: linear-gradient(145deg, #2a2a3c, #1e1e2d);
+    color: #e1e1e1;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--bs-primary);
+}
+
+[data-bs-theme="dark"] #password-form .form-group label {
+    color: #e1e1e1;
+}
+
+/* Input field */
+[data-bs-theme="dark"] #password-form .input-with-icon input {
+    background-color: #1e1e2d;
+    color: #e1e1e1;
+    border: 1px solid var(--bs-primary);
+}
+
+[data-bs-theme="dark"] #password-form .input-with-icon input:focus {
+    border-color: var(--bs-accent);
+    box-shadow: 0 0 0 0.25rem rgba(255, 203, 1, 0.25);
+}
+
+/* Icon inside input */
+[data-bs-theme="dark"] #password-form .input-with-icon i {
+    color: #ccc;
+}
+
+/* Toggle password button */
+[data-bs-theme="dark"] #password-form .toggle-password {
+    background-color: var(--bs-primary);
+    color: #fff;
+    border: none;
+}
+
+[data-bs-theme="dark"] #password-form .toggle-password:hover {
+    background-color: var(--bs-accent);
+    color: #000;
+}
+
+/* Password strength bar */
+[data-bs-theme="dark"] #password-form .strength-meter {
+    background-color: #444;
+    border-radius: 5px;
+}
+
+[data-bs-theme="dark"] #password-form .strength-bar {
+    background-color: var(--bs-accent);
+}
+
+/* Error messages */
+[data-bs-theme="dark"] #password-form .error-message {
+    color: #ff6b6b;
+}
+
+/* Submit button */
+[data-bs-theme="dark"] #password-form .save-btn {
+    background-color: var(--bs-primary);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+[data-bs-theme="dark"] #password-form .save-btn:hover {
+    background-color: var(--bs-accent);
+    color: #000;
+}
+
+/* ===================== PROFILE FORM ===================== */
+[data-bs-theme="dark"] #profile-info-form {
+    background: linear-gradient(145deg, #2a2a3c, #1e1e2d);
+    color: #e1e1e1;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--bs-primary);
+}
+
+/* Form group label */
+[data-bs-theme="dark"] #profile-info-form .form-group label {
+    color: #e1e1e1;
+}
+
+/* Input fields */
+[data-bs-theme="dark"] #profile-info-form .input-with-icon input {
+    background-color: #1e1e2d;
+    color: #e1e1e1;
+    border: 1px solid var(--bs-primary);
+}
+
+[data-bs-theme="dark"] #profile-info-form .input-with-icon input:focus {
+    border-color: var(--bs-accent);
+    box-shadow: 0 0 0 0.25rem rgba(255, 203, 1, 0.25);
+}
+
+/* Input icons */
+[data-bs-theme="dark"] #profile-info-form .input-with-icon i {
+    color: #ccc;
+}
+
+/* Foto preview */
+[data-bs-theme="dark"] #profile-info-form .photo-preview {
+    background-color: #1e1e2d;
+    border: 1px solid var(--bs-primary);
+    border-radius: 50%;
+}
+
+[data-bs-theme="dark"] #profile-info-form .photo-preview:hover {
+    border-color: var(--bs-accent);
+}
+
+/* Error messages */
+[data-bs-theme="dark"] #profile-info-form .error-message {
+    color: #ff6b6b;
+}
+
+/* Submit button */
+[data-bs-theme="dark"] #profile-info-form .save-btn {
+    background-color: var(--bs-primary);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+[data-bs-theme="dark"] #profile-info-form .save-btn:hover {
+    background-color: var(--bs-accent);
+    color: #000;
+}
+
+/* ===================== DARK MODE - DELETE ACCOUNT ===================== */
+[data-bs-theme="dark"] #delete-account-form {
+    background: linear-gradient(145deg, #2a2a3c, #1e1e2d);
+    color: #e1e1e1;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--bs-primary);
+}
+
+/* Warning box */
+[data-bs-theme="dark"] #delete-account-form .warning-box {
+    background-color: #3b3b4c;
+    color: #f8d7da;
+    border-left: 5px solid #f03e3e;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+[data-bs-theme="dark"] #delete-account-form .warning-box i {
+    font-size: 1.5rem;
+}
+
+/* Form group label */
+[data-bs-theme="dark"] #delete-account-form .form-group label {
+    color: #e1e1e1;
+}
+
+/* Input fields */
+[data-bs-theme="dark"] #delete-account-form .input-with-icon input {
+    background-color: #1e1e2d;
+    color: #e1e1e1;
+    border: 1px solid var(--bs-primary);
+}
+
+[data-bs-theme="dark"] #delete-account-form .input-with-icon input:focus {
+    border-color: var(--bs-accent);
+    box-shadow: 0 0 0 0.25rem rgba(255, 203, 1, 0.25);
+}
+
+/* Input icons */
+[data-bs-theme="dark"] #delete-account-form .input-with-icon i {
+    color: #ccc;
+}
+
+/* Error messages */
+[data-bs-theme="dark"] #delete-account-form .error-message {
+    color: #ff6b6b;
+}
+
+/* Delete button */
+[data-bs-theme="dark"] #delete-account-form .delete-btn {
+    background-color: #b92b27;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+[data-bs-theme="dark"] #delete-account-form .delete-btn:hover {
+    background-color: #e63946;
+}
+
+/* Modal */
+[data-bs-theme="dark"] #delete-confirm-modal .modal-content {
+    background: linear-gradient(145deg, #2a2a3c, #1e1e2d);
+    color: #e1e1e1;
+    border-radius: 10px;
+    border: 1px solid var(--bs-primary);
+}
+
+[data-bs-theme="dark"] #delete-confirm-modal .modal-header,
+[data-bs-theme="dark"] #delete-confirm-modal .modal-body,
+[data-bs-theme="dark"] #delete-confirm-modal .modal-footer {
+    color: #e1e1e1;
+}
+
+[data-bs-theme="dark"] #delete-confirm-modal .cancel-btn {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+[data-bs-theme="dark"] #delete-confirm-modal .confirm-delete-btn {
+    background-color: #b92b27;
+    color: #fff;
+}
+
+[data-bs-theme="dark"] #delete-confirm-modal .cancel-btn:hover {
+    background-color: #495057;
+}
+
+[data-bs-theme="dark"] #delete-confirm-modal .confirm-delete-btn:hover {
+    background-color: #e63946;
+}
+
+/* ===================== ADDITIONAL HOVER EFFECTS ===================== */
+[data-bs-theme="dark"] .list-group-item {
+    background-color: #2a2a3c !important;
+    border-color: var(--bs-primary) !important;
+    color: #e1e1e1 !important;
+}
+
+[data-bs-theme="dark"] .list-group-item:hover {
+    background-color: rgba(255, 203, 1, 0.1) !important;
+    border-color: var(--bs-accent) !important;
+}
+
+[data-bs-theme="dark"] .pagination .page-link {
+    background-color: #2a2a3c !important;
+    border-color: var(--bs-primary) !important;
+    color: #e1e1e1 !important;
+}
+
+[data-bs-theme="dark"] .pagination .page-link:hover {
+    background-color: var(--bs-accent) !important;
+    color: #000 !important;
+    border-color: var(--bs-accent) !important;
+}
+
+[data-bs-theme="dark"] .pagination .page-item.active .page-link {
+    background-color: var(--bs-primary) !important;
+    border-color: var(--bs-primary) !important;
+    color: #fff !important;
+}
+
+[data-bs-theme="dark"] .alert {
+    background-color: #2a2a3c !important;
+    border-color: var(--bs-primary) !important;
+    color: #e1e1e1 !important;
+}
+
+[data-bs-theme="dark"] .alert-success {
+    background-color: rgba(255, 203, 1, 0.1) !important;
+    border-color: var(--bs-accent) !important;
+    color: var(--bs-accent) !important;
+}
+
+[data-bs-theme="dark"] .alert-danger {
+    background-color: rgba(233, 57, 70, 0.1) !important;
+    border-color: #e63946 !important;
+    color: #ff6b6b !important;
+}
+
+[data-bs-theme="dark"] .alert-info {
+    background-color: rgba(29, 38, 80, 0.3) !important;
+    border-color: var(--bs-primary) !important;
+    color: #fff !important;
+}
+
+[data-bs-theme="dark"] .breadcrumb {
+    background-color: #2a2a3c !important;
+}
+
+[data-bs-theme="dark"] .breadcrumb-item a {
+    color: var(--bs-accent) !important;
+}
+
+[data-bs-theme="dark"] .breadcrumb-item a:hover {
+    color: #fff !important;
+}
+
+[data-bs-theme="dark"] .breadcrumb-item.active {
+    color: #e1e1e1 !important;
+}
+
+/* Search & Filter Elements */
+[data-bs-theme="dark"] .search-wrapper {
+    background-color: #2a2a3c !important;
+    border-color: var(--bs-primary) !important;
+}
+
+[data-bs-theme="dark"] .search-wrapper:hover {
+    border-color: var(--bs-accent) !important;
+}
+
+[data-bs-theme="dark"] .filter-btn {
+    background-color: var(--bs-primary) !important;
+    color: #fff !important;
+    border-color: var(--bs-primary) !important;
+}
+
+[data-bs-theme="dark"] .filter-btn:hover {
+    background-color: var(--bs-accent) !important;
+    color: #000 !important;
+    border-color: var(--bs-accent) !important;
+}
+
+/* Status Badges */
+[data-bs-theme="dark"] .badge-success {
+    background-color: seagreen !important;
+    color: var(--bs-btn-color) !important;
+}
+
+[data-bs-theme="dark"] .badge-warning {
+    background-color: #ffc107 !important;
+    color: #000 !important;
+}
+
+[data-bs-theme="dark"] .badge-danger {
+    background-color: #e63946 !important;
+    color: #fff !important;
+}
+
+[data-bs-theme="dark"] .badge-info {
+    background-color: var(--bs-primary) !important;
+    color: #fff !important;
+}
+
+/* Tooltip & Popover */
+[data-bs-theme="dark"] .tooltip .tooltip-inner {
+    background-color: var(--bs-primary) !important;
+    color: #fff !important;
+}
+
+[data-bs-theme="dark"] .popover {
+    background-color: #2a2a3c !important;
+    border-color: var(--bs-primary) !important;
+}
+
+[data-bs-theme="dark"] .popover-header {
+    background-color: var(--bs-primary) !important;
+    color: #fff !important;
+}
+
+[data-bs-theme="dark"] .popover-body {
+    color: #e1e1e1 !important;
+}
+
+/* Accordion */
+[data-bs-theme="dark"] .accordion-item {
+    background-color: #2a2a3c !important;
+    border-color: var(--bs-primary) !important;
+}
+
+[data-bs-theme="dark"] .accordion-button {
+    background-color: var(--bs-primary) !important;
+    color: #fff !important;
+}
+
+[data-bs-theme="dark"] .accordion-button:not(.collapsed) {
+    background-color: var(--bs-accent) !important;
+    color: #000 !important;
+}
+
+[data-bs-theme="dark"] .accordion-button:hover {
+    background-color: var(--bs-accent) !important;
+    color: #000 !important;
+}
+
+[data-bs-theme="dark"] .accordion-body {
+    background-color: #2a2a3c !important;
+    color: #e1e1e1 !important;
+}
+
+/* Card Dark Mode */
+[data-bs-theme="dark"] .card {
+    background-color: #2b2b2b !important;
+    /* dasar gelap */
+    color: #f0f0f0 !important;
+    /* teks terang */
+    border: 1px solid #444 !important;
+    border-radius: 12px;
+    /* sudut lembut */
+}
+
+[data-bs-theme="dark"] .card:hover {
+    border: 2px solid #ffcb01;
+    /* glow lembut */
+}
+
+/* Card Title */
+[data-bs-theme="dark"] .card-title {
+    color: var(--bs-primary) !important;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Info List */
+[data-bs-theme="dark"] .info-list dt {
+    color: #bbb !important;
+    font-weight: 500;
+}
+
+[data-bs-theme="dark"] .info-list dd {
+    color: #fff !important;
+}
+
+/* Badge Outline dalam Dark Mode */
+[data-bs-theme="dark"] .badge-outline-danger {
+    color: #ff6b6b !important;
+    border: 1px solid #ff6b6b !important;
+    background: transparent !important;
+}
+
+[data-bs-theme="dark"] .get-template p,
+[data-bs-theme="dark"] .get-template i,
+[data-bs-theme="dark"] .get-template .badge {
+    color: #ffffff !important;
+}
+
+/* DARK THEME STYLES */
+[data-bs-theme="dark"] {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+/* Card Title */
+[data-bs-theme="dark"] .card-title {
+    color: var(--bs-primary) !important;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Info List */
+[data-bs-theme="dark"] .info-list dt {
+    color: #bbb !important;
+    font-weight: 500;
+}
+
+[data-bs-theme="dark"] .info-list dd {
+    color: #fff !important;
+}
+
+/* Badge Outline dalam Dark Mode */
+[data-bs-theme="dark"] .badge-outline-danger {
+    color: #ff6b6b !important;
+    border: 1px solid #ff6b6b !important;
+    background: transparent !important;
+}
+
+/* Get Template */
+[data-bs-theme="dark"] .get-template p,
+[data-bs-theme="dark"] .get-template i,
+[data-bs-theme="dark"] .get-template .badge {
+    color: #ffffff !important;
+}
+
+/* Popup Modern Dark Mode */
+[data-bs-theme="dark"] .gear-popup {
+    background-color: #1e1e2e !important;
+    color: #fff !important;
+    border: 1px solid #333;
+}
+
+[data-bs-theme="dark"] .popup-header {
+    background-color: #2a2a3c !important;
+    border-bottom: 1px solid #444;
+    color: #fff;
+}
+
+[data-bs-theme="dark"] .popup-item {
+    background-color: transparent !important;
+    color: #ddd !important;
+}
+
+[data-bs-theme="dark"] .popup-item:hover {
+    background-color: #2a2a3c !important;
+    color: #fff !important;
+}
+
+[data-bs-theme="dark"] .theme-btn.dark-btn {
+    border: 2px solid #4e73df;
+}
+
+[data-bs-theme="dark"] .theme-btn.light-btn {
+    border: 2px solid #fff;
+}
+
+[data-bs-theme="dark"] .modal-content {
+    background-color: #1e1e2e !important;
+    color: #fff;
+}
+
+[data-bs-theme="dark"] .modal-body {
+    background-color: #1e1e2e !important;
+}
+
+[data-bs-theme="dark"] .modal-header {
+    background-color: #2a2a3c !important;
+    color: #fff;
+}
+
+[data-bs-theme="dark"] .btn-outline-danger {
+    color: #ff6b6b !important;
+    border-color: #ff6b6b !important;
+}
+
+[data-bs-theme="dark"] .btn-warning {
+    background-color: #f6c23e !important;
+    color: #000 !important;
+}
+
+[data-bs-theme="dark"] .btn-close {
+    filter: invert(1);
+}
+
+/* =========================== */
+/* ====== SPINNER POPUP ======*/
+/* =========================== */
+[data-bs-theme="dark"] .gear-popup {
+    background: #1e1e2d;
+    color: #fff;
+}
+
+[data-bs-theme="dark"] .popup-header {
+    background: #2c2c3e;
+    border-bottom: 1px solid #444;
+}
+
+[data-bs-theme="dark"] .popup-item:hover {
+    background: #2c2c3e;
+    color: #fff;
+}
+
+/* Pagination Dark Theme - Semua tombol */
+[data-bs-theme="dark"] nav ul.pagination li span.page-link,
+[data-bs-theme="dark"] nav ul.pagination li a.page-link,
+[data-bs-theme="dark"] nav ul.pagination li a,
+[data-bs-theme="dark"] nav ul.pagination li span.page-link svg,
+[data-bs-theme="dark"] nav ul.pagination li a svg {
+    background: #2a2a3c !important;
+    color: #ccc !important;
+    border-color: #444 !important;
+    stroke: currentColor;
+    /* supaya icon ikut warna teks */
+}
+
+/* Tombol hover/focus (loop + next/prev/first/last) */
+[data-bs-theme="dark"] nav ul.pagination li a:hover,
+[data-bs-theme="dark"] nav ul.pagination li a:focus {
+    background: linear-gradient(90deg, #4f46e5, #9333ea) !important;
+    color: #fff !important;
+    border-color: transparent !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+/* Tombol aktif */
+[data-bs-theme="dark"] nav ul.pagination li span.page-link.active {
+    background: linear-gradient(90deg, #4f46e5, #9333ea) !important;
+    color: #fff !important;
+    border-color: #4f46e5 !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Tombol disabled */
+[data-bs-theme="dark"] nav ul.pagination li span.page-link.disabled,
+[data-bs-theme="dark"] nav ul.pagination li span.page-link[disabled] {
+    background: #1e1e2d !important;
+    color: #666 !important;
+    border-color: #333 !important;
+    stroke: #666 !important;
+}
+
+/* Progress bar dark mode */
+[data-bs-theme="dark"] nav .bg-gray-200 {
+    background: #1e1e2d !important;
+}
+
+[data-bs-theme="dark"] nav .bg-gradient-to-r {
+    background: linear-gradient(90deg, #4f46e5, #9333ea) !important;
+}
+
+/* ============================================================================== */
+/* ================================= PAGINATION ================================= */
+/* ============================================================================== */
+[data-bs-theme="dark"] .pagination-link,
+[data-bs-theme="dark"] .pagination-current,
+[data-bs-theme="dark"] .pagination-disabled,
+[data-bs-theme="dark"] .pagination-dots {
+    border: 1px solid var(--bs-gray-700);
+    color: #ddd;
+    background: #1e293b;
+    /* dark background */
+}
+
+[data-bs-theme="dark"] .pagination-link:hover {
+    background-color: var(--bs-accent, #ffcb01);
+    color: var(--bs-primary, #1d2650);
+    border-color: transparent;
+}
+
+[data-bs-theme="dark"] .pagination-current {
+    background: var(--bs-accent, #ffcb01);
+    color: var(--bs-primary, #1d2650);
+    font-weight: bold;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+[data-bs-theme="dark"] .pagination-disabled {
+    background: #334155;
+    color: #64748b;
+    opacity: 0.5;
+}
+
+[data-bs-theme="dark"] .pagination-dots {
+    background: transparent;
+    color: #94a3b8;
+}
+
+[data-bs-theme="dark"] .progress-bar-container {
+    background: #334155;
+}
+
+[data-bs-theme="dark"] .progress-bar {
+    background: linear-gradient(to right, #60a5fa, #a78bfa);
+}
+
+[data-bs-theme="dark"] .news-create-card {
+    background: #1e1e2d !important;
+    box-shadow: none !important;
+    border: none !important;
+}

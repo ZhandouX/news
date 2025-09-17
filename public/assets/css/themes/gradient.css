@@ -1,0 +1,1542 @@
+/* ========================================================= */
+/* ===================== GRADIENT MODE ===================== */
+/* ========================================================= */
+
+:root[data-bs-theme="gradient"] {
+    --bs-body-bg: #e1e1e1;
+    --bs-body-color: #1d2650;
+    --bs-body-color-gd: #ffffff;
+    --bs-card-bg: #ffffff;
+    --bs-card-border-color: #e9ecef;
+    --bs-navbar-bg: #ffffff;
+    --bs-sidebar-bg: #ffffff;
+    --bs-btn-bg: #1d2650;
+    --bs-btn-color: #fff;
+    --bs-table-bg: #ffffff;
+    --bs-table-color: #212529;
+    --bs-dropdown-bg: #ffffff;
+    --bs-dropdown-color: #212529;
+    --bs-primary: #1d2650;
+    --bs-accent: #ffcb01;
+    --bs-success: #198754;
+    --bs-danger: #F95F53;
+    --bs-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --bs-shadow-hover: 0 4px 20px rgba(0, 0, 0, 0.15);
+    
+    /* GRADIENT COLOR */
+    --bs-secondary-gd: linear-gradient(135deg, #e6e6e6 0%, #d1d1d1 100%);
+    --bs-bg-dropdown-gd: linear-gradient(135deg, #eeeeee 0%, #b5b7c4 100%);
+    --bs-accent-gd: linear-gradient(135deg, #ffcb01 0%, #ffaf01, #ff8d01 100%);
+    --bs-primary-gd: linear-gradient(135deg, #1d2650 0%, rgb(7, 42, 200) 100%);
+    --bs-primary-3gd: linear-gradient(90deg, #1d2650 0%, #142881, rgb(6, 23, 99) 100%);
+    --bs-success-gd: linear-gradient(135deg, #198754 0%, #4fb988 100%);
+    --bs-bg-navbar-gd: linear-gradient(150deg, #1d2650 0%, rgb(7, 42, 200) 100%);
+    --bs-body-bg-gd: linear-gradient(90deg, #1d2650 0%, #283676, #2c3b7d 100%);
+    --bs-card-bg-gd: linear-gradient(360deg, #eeeeee 0%, #b5b7c4 100%);
+
+    /* GRADIENT COLOR HOVER */
+    --bs-accent-gd-hv: linear-gradient(135deg, #ff8d01 0%, #ffaf01, #ffcb01 100%);
+}
+
+/* Body & Main Content */
+[data-bs-theme="gradient"] body,
+[data-bs-theme="gradient"] .main-panel,
+[data-bs-theme="gradient"] .content-wrapper {
+    background-color: var(--bs-body-bg) !important;
+    color: var(--bs-body-color) !important;
+}
+
+/* ================================================== */
+/* ===================== NAVBAR ===================== */
+/* ================================================== */
+[data-bs-theme="gradient"] nav.navbar.default-layout {
+    background: var(--bs-bg-navbar-gd) !important;
+    color: var(--bs-accent) !important;
+}
+
+[data-bs-theme="gradient"] nav.navbar.default-layout>* {
+    background: var(--bs-primary) !important;
+    color: var(--bs-accent) !important;
+}
+
+[data-bs-theme="gradient"] nav.navbar.default-layout .navbar-nav .nav-link,
+[data-bs-theme="gradient"] nav.navbar.default-layout .navbar-nav h1,
+[data-bs-theme="gradient"] nav.navbar.default-layout .navbar-nav h3,
+[data-bs-theme="gradient"] nav.navbar .navbar-menu-wrapper .navbar-nav .nav-item .search-form input {
+    background: transparent !important;
+    color: var(--bs-body-bg) !important;
+}
+
+[data-bs-theme="gradient"] nav.navbar.default-layout .navbar-menu-wrapper .navbar-date-picker,
+[data-bs-theme="gradient"] nav.navbar.default-layout .navbar-menu-wrapper .navbar-date-picker input {
+    background-color: transparent !important;
+    color: #ffffff !important;
+}
+
+[data-bs-theme="gradient"] nav.navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item span,
+[data-bs-theme="gradient"] nav.navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item strong,
+[data-bs-theme="gradient"] nav.navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item i {
+    color: var(--bs-accent) !important;
+}
+
+[data-bs-theme="gradient"] .navbar .navbar-menu-wrapper .navbar-nav .nav-item {
+    background: transparent !important;
+}
+
+[data-bs-theme="gradient"] nav.navbar.default-layout .navbar-nav .nav-link:hover {
+    color: var(--bs-body-color-gd) !important;
+}
+
+[data-bs-theme="gradient"] nav.navbar.default-layout .nav-link.dropdown-bordered {
+    color: var(--bs-accent) !important;
+}
+/* 
+[data-bs-theme="gradient"] nav.navbar.default-layout .nav-item .dropdown-menu a {
+    background: transparent !important;
+} */
+
+[data-bs-theme="gradient"] nav.navbar.default-layout .nav-link.dropdown-bordered:hover {
+    background: var(--bs-accent-gd) !important;
+    color: var(--bs-primary) !important;
+}
+
+[data-bs-theme="gradient"] nav.navbar.default-layout .dropdown-menu {
+    color: var(--bs-dropdown-color) !important;
+}
+
+[data-bs-theme="gradient"] nav.navbar.default-layout .dropdown-item,
+[data-bs-theme="gradient"] nav.navbar.default-layout .dropdown-item i {
+    background-color: transparent !important;
+    color: var(--bs-accent) !important;
+}
+
+[data-bs-theme="gradient"] nav.navbar.default-layout .dropdown-item:hover {
+    background: var(--bs-accent-gd) !important;
+    color: var(--bs-primary) !important;
+}
+
+[data-bs-theme="gradient"] nav.navbar.default-layout .nav-link.dropdown-bordered i:hover {
+    color: var(--bs-primary) !important;
+}
+
+/* Form input & search */
+[data-bs-theme="gradient"] nav.navbar.default-layout input,
+[data-bs-theme="gradient"] nav.navbar.default-layout select,
+[data-bs-theme="gradient"] nav.navbar.default-layout textarea {
+    color: #dee2e6 !important;
+    border-color: #dee2e6 !important;
+}
+
+[data-bs-theme="gradient"] nav.navbar.default-layout input:focus {
+    border-color: var(--bs-primary) !important;
+    box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25) !important;
+}
+
+[data-bs-theme="gradient"] nav.navbar.default-layout input::placeholder,
+[data-bs-theme="gradient"] nav.navbar.default-layout textarea::placeholder {
+    color: #6c757d !important;
+}
+
+/* Badge */
+[data-bs-theme="gradient"] nav.navbar.default-layout .badge {
+    background-color: var(--bs-primary) !important;
+    color: #fff !important;
+}
+
+/* ==================================================== */
+/* ===================== CALENDAR ===================== */
+/* ==================================================== */
+[data-bs-theme="gradient"] .flatpickr-calendar {
+    background: var(--bs-secondary-gd) !important;
+    color: var(--bs-primary) !important;
+    border: 1px solid #444 !important;
+    font-family: "Arial", sans-serif;
+    z-index: 9999;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* ===================================================== */
+/* ===================== FLATPICKR ===================== */
+/* ===================================================== */
+
+/* Header Utama */
+[data-bs-theme="gradient"] .flatpickr-calendar .flatpickr-months {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 0.5rem 0.75rem !important;
+    background-color: var(--bs-primary) !important;
+    border-bottom: 1px solid #444 !important;
+    border-color: var(--bs-accent) !important;
+    height: 60px !important;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 2;
+}
+
+/* Menghilangkan backgroud biru bawaan */
+[data-bs-theme="gradient"] .flatpickr-calendar .flatpickr-month,
+[data-bs-theme="gradient"] .flatpickr-calendar .flatpickr-month::before,
+[data-bs-theme="gradient"] .flatpickr-calendar .flatpickr-month::after {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* Teks bulan dan tahun */
+[data-bs-theme="gradient"] .flatpickr-calendar .flatpickr-current-month {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 0.5rem;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    color: #e1e1e1 !important;
+    text-transform: capitalize;
+    margin: 0;
+    flex-grow: 1;
+    text-align: center;
+    position: relative;
+}
+
+/* Dropdown bulan */
+[data-bs-theme="gradient"] .flatpickr-calendar .flatpickr-monthDropdown-months {
+    background-color: transparent !important;
+    border: none !important;
+    color: var(--bs-body-bg) !important;
+    border-radius: 6px;
+    padding: 0.25rem 0.5rem !important;
+    font-size: 0.95rem !important;
+    outline: none;
+    transition: border 0.2s ease-in-out, background 0.2 ease-in-out;
+    min-width: 110px;
+    cursor: pointer;
+}
+
+[data-bs-theme="gradient"] .flatpickr-calendar .flatpickr-monthDropdown-months:hover {
+    border-color: var(--bs-primary) !important;
+    background-color: #e1e1e1 !important;
+}
+
+[data-bs-theme="gradient"] .flatpickr-calendar .flatpickr-monthDropdown-months option {
+    background: transparent !important;
+    color: var(--bs-primary) !important;
+}
+
+[data-bs-theme="gradient"] .flatpickr-calendar .flatpickr-monthDropdown-month input.cur-year {
+    background: transparent !important;
+    border: none !important;
+    color: #e1e1e1 !important;
+    padding: 0.25rem 0.5rem !important;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    width: 65px;
+    text-align: center;
+    outline: none;
+    transition: border 0.2s ease-in-out, background 0.2 ease-in-out;
+}
+
+/* Efek fokus input tahun */
+[data-bs-theme="gradient"] .flatpickr-calendar .flatpickr-current-month input.cur-year:focus {
+    border-color: var(--bs-primary) !important;
+    background: var(--bs-secondary-gd) !important;
+}
+
+/* Menghilangkan wrapper biru pada tahun */
+[data-bs-theme="gradient"] .flatpickr-calendar .flatpickr-months .numInputWrapper {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* Tombol navigation prev / next */
+[data-bs-theme="gradient"] .flatpickr-calendar .flatpickr-prev-month,
+[data-bs-theme="gradient"] .flatpickr-calendar .flatpickr-next-month {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 32px;
+    height: 32px;
+    color: var(--bs-accent) !important;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+}
+
+/* Efek hover tombol navigation */
+[data-bs-theme="gradient"] .flatpickr-calendar .flatpickr-prev-month:hover,
+[data-bs-theme="gradient"] .flatpickr-calendar .flatpickr-next-month:hover {
+    background-color: rgba(255, 203, 1, 0.15) !important;
+}
+
+/* Ikon (left-right) di dalam tombol navigation */
+[data-bs-theme="gradient"] .flatpickr-calendar .flatpickr-prev-month svg,
+[data-bs-theme="gradient"] .flatpickr-calendar .flatpickr-next-month svg {
+    fill: var(--bs-accent) !important;
+    width: 18px;
+    height: 18px;
+}
+
+/* Nama Hari (Sen, Sel, Rab, Kam, Jum, Sab, Min) */
+[data-bs-theme="gradient"] .flatpickr-calendar .flatpickr-weekday {
+    color: var(--bs-primary) !important;
+    font-weight: 500 !important;
+    background: var(--bs-bg-dropdown-gd) !important;
+    padding: 0.5rem 0 !important;
+    border-bottom: 1px solid var(--bs-primary) !important;
+}
+
+/* =================================================== */
+/* ===================== SIDEBAR ===================== */
+/* =================================================== */
+[data-bs-theme="gradient"] .sidebar {
+    background: var(--bs-primary-3gd) !important;
+    color: var(--bs-accent) !important;
+    box-shadow: 2px 0 10px rgba(95, 95, 95, 0.1);
+}
+
+[data-bs-theme="gradient"] .sidebar .nav .nav-item .nav-link,
+[data-bs-theme="gradient"] .sidebar .nav .nav-item,
+[data-bs-theme="gradient"] .sidebar .nav .nav-item .nav-link i {
+    color: var(--bs-accent) !important;
+}
+
+[data-bs-theme="gradient"] .sidebar .nav .nav-item .nav-link:hover {
+    background: var(--bs-accent-gd-hv) !important;
+    color: var(--bs-primary) !important;
+}
+
+[data-bs-theme="gradient"] .sidebar .nav .nav-item .nav-link:hover i,
+[data-bs-theme="gradient"] .sidebar .nav .nav-item .nav-link:hover span {
+    color: var(--bs-primary) !important;
+}
+
+[data-bs-theme="gradient"] .sidebar .nav .nav-item.active .nav-link span,
+[data-bs-theme="gradient"] .sidebar .nav .nav-item.active .nav-link:hover span {
+    color: var(--bs-primary) !important;
+}
+
+[data-bs-theme="gradient"] .sidebar .nav .nav-item.active .nav-link {
+    background: var(--bs-accent-gd) !important;
+    color: #fff !important;
+}
+
+[data-bs-theme="gradient"] .sidebar .nav .nav-item.active .nav-link i {
+    color: var(--bs-primary) !important;
+}
+
+/* ===================== Stats Berita ===================== */
+[data-bs-theme="gradient"] .statistics-details {
+    background: var(--primary-gradient) !important;
+}
+[data-bs-theme="gradient"] .statistics-details .statistics-title,
+[data-bs-theme="gradient"] .statistics-details .rate-percentage {
+    color: #ffcb01 !important;
+}
+
+/* ================================================= */
+/* ===================== CARDS ===================== */
+/* ================================================= */
+[data-bs-theme="gradient"] .card {
+    background: var(--bs-card-bg-gd) !important;
+}
+
+[data-bs-theme="gradient"] .card textarea,
+[data-bs-theme="gradient"] .card.card-rounded,
+[data-bs-theme="gradient"] .modal .card .card-body {
+    background: var(--bs-card-bg) !important;
+    color: var(--bs-body-color) !important;
+    border-color: var(--bs-card-border-color) !important;
+    box-shadow: var(--bs-shadow);
+}
+
+[data-bs-theme="gradient"] .card:hover {
+    border-color: var(--bs-primary) !important;
+    box-shadow: var(--bs-shadow-hover);
+}
+
+[data-bs-theme="gradient"] .gradient-theme,
+[data-bs-theme="gradient"] .gradient-theme label,
+[data-bs-theme="gradient"] .gradient-theme h4 {
+    background: var(--bs-card-bg) !important;
+    color: #212529;
+}
+
+
+/* =================================================== */
+/* ===================== BUTTONS ===================== */
+/* =================================================== */
+
+/* btn */
+[data-bs-theme="gradient"] .btn {
+    background: var(--bs-btn-bg) !important;
+    color: var(--bs-btn-color) !important;
+    border: 1px solid rgba(255,255,255,0.2) !important;
+    border-radius: 15px;
+    padding: 12px 24px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(15px);
+    position: relative;
+    overflow: hidden;
+}
+
+[data-bs-theme="gradient"] .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 1s ease;
+}
+
+[data-bs-theme="gradient"] .btn:hover::before {
+    left: 100%;
+}
+
+[data-bs-theme="gradient"] .btn:hover {
+    background: var(--bs-accent) !important;
+    color: #ffffff !important;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(250, 112, 154, 0.4);
+}
+
+/* ============================================== */
+/* =============== BUTTON PRIMARY =============== */
+/* ============================================== */
+[data-bs-theme="gradient"] .btn-primary {
+    background: var(--bs-primary-3gd) !important;
+    color: var(--bs-accent) !important;
+    border: none !important;
+    border-radius: 12px;
+    padding: 0.6rem 1.4rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.25);
+}
+
+[data-bs-theme="gradient"] .btn-primary:hover {
+    background: var(--bs-accent-gd-hv) !important;
+    color: var(--bs-primary) !important;
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+    box-shadow: 0 6px 18px rgba(0, 123, 255, 0.35);
+}
+
+/* ============================================== */
+/* =============== BUTTON SUCCESS =============== */
+/* ============================================== */
+[data-bs-theme="gradient"] .btn-success {
+    background: var(--bs-success-gd) !important;
+    color: #fff !important;
+    border: none !important;
+    border-radius: 12px;
+    padding: 0.6rem 1.4rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 12px rgba(0, 255, 183, 0.25);
+}
+
+[data-bs-theme="gradient"] .btn-success:hover {
+    background: transparent !important;
+    color: var(--bs-success) !important;
+    border: 1px solid var(--bs-success) !important;
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+    box-shadow: 0 6px 18px rgba(0, 255, 183, 0.35);
+}
+
+/* ============================================== */
+/* =============== BUTTON WARNING =============== */
+/* ============================================== */
+[data-bs-theme="gradient"] .btn-warning {
+    background: var(--bs-accent-gd) !important;
+    color: #000 !important;
+    border: none !important;
+    border-radius: 12px;
+    padding: 0.6rem 1.4rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(255, 193, 7, 0.25);
+}
+
+[data-bs-theme="gradient"] .btn-warning:hover {
+    background: var(--bs-accent-gd-hv) !important;
+    color: #000 !important;
+    filter: brightness(1.1);
+    box-shadow: 0 6px 18px rgba(255, 193, 7, 0.35);
+}
+
+/* ============================================= */
+/* =============== BUTTON DANGER =============== */
+/* ============================================= */
+[data-bs-theme="gradient"] .btn-danger {
+    background: var(--bs-danger) !important;
+    color: #ffffff !important;
+    border: 1px solid var(--bs-danger) !important;
+    border-radius: 12px;
+    padding: 0.6rem 1.4rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 12px rgba(255, 0, 0, 0.25);
+}
+
+[data-bs-theme="gradient"] .btn-danger:hover {
+    background: transparent !important;
+    color: var(--bs-danger) !important;
+    border: 1px solid var(--bs-danger) !important;
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+    box-shadow: 0 6px 18px rgba(255, 0, 0, 0.35);
+}
+
+/* ============================================== */
+/* =============== BUTTON GRADIENT =============== */
+/* ============================================== */
+[data-bs-theme="gradient"] .btn-gradient {
+    background-color: #f8f9fa !important;
+    color: #212529 !important;
+    border: 1px solid #dee2e6 !important;
+    border-radius: 12px;
+    padding: 0.6rem 1.4rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+[data-bs-theme="gradient"] .btn-gradient:hover {
+    background-color: #e2e6ea !important;
+    color: #212529 !important;
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* ====================================================== */
+/* =============== BUTTON OUTLINE PRIMARY =============== */
+/* ====================================================== */
+[data-bs-theme="gradient"] .btn-outline-primary {
+    background-color: transparent !important;
+    color: var(--bs-primary) !important;
+    border: 1px solid var(--bs-primary) !important;
+    border-radius: 12px;
+    padding: 0.6rem 1.4rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.15);
+}
+
+[data-bs-theme="gradient"] .btn-outline-primary:hover {
+    background-color: var(--bs-primary) !important;
+    color: #fff !important;
+    border-color: var(--bs-primary) !important;
+    filter: brightness(1.1);
+    box-shadow: 0 6px 18px rgba(0, 123, 255, 0.25);
+}
+
+/* =================================================== */
+/* =============== BUTTON OUTLINE INFO =============== */
+/* =================================================== */
+[data-bs-theme="gradient"] .btn-outline-info {
+    background-color: transparent !important;
+    color: var(--bs-info) !important;
+    border: 1px solid var(--bs-info) !important;
+    border-radius: 12px;
+    padding: 0.6rem 1.4rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(23, 162, 184, 0.15);
+}
+
+[data-bs-theme="gradient"] .btn-outline-info:hover {
+    background-color: var(--bs-info) !important;
+    color: #fff !important;
+    border-color: var(--bs-info) !important;
+    filter: brightness(1.1);
+    box-shadow: 0 6px 18px rgba(23, 162, 184, 0.25);
+}
+
+/* ===================================================== */
+/* =============== BUTTON OUTLINE DANGER =============== */
+/* ===================================================== */
+[data-bs-theme="gradient"] .btn-outline-danger {
+    background-color: transparent !important;
+    color: var(--bs-danger) !important;
+    border: 1px solid var(--bs-danger) !important;
+    border-radius: 12px;
+    padding: 0.6rem 1.4rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(220, 53, 69, 0.15);
+}
+
+[data-bs-theme="gradient"] .btn-outline-danger:hover {
+    background-color: var(--bs-danger) !important;
+    color: #fff !important;
+    border-color: var(--bs-danger) !important;
+    filter: brightness(1.1);
+    box-shadow: 0 6px 18px rgba(220, 53, 69, 0.25);
+}
+
+/* =========================================================== */
+/* ===================== NEWS STATISTICS ===================== */
+/* =========================================================== */
+[data-bs-theme="gradient"] h3 {
+    color: #212529 !important;
+}
+
+/* ================================================== */
+/* ===================== TABLES ===================== */
+/* ================================================== */
+[data-bs-theme="gradient"] table,
+[data-bs-theme="gradient"] td,
+[data-bs-theme="gradient"] td h6 {
+    background-color: transparent !important;
+    color: var(--bs-table-color) !important;
+    border-color: #dee2e6 !important;
+}
+
+[data-bs-theme="gradient"] tr {
+    background-color: rgba(0, 123, 255, 0.05) !important;
+    color: var(--bs-primary) !important;
+    border-color: #1d2650 !important;
+}
+
+[data-bs-theme="gradient"] th {
+    background-color: var(--bs-primary) !important;
+    color: #ffffff !important;
+    border-color: #dee2e6 !important;
+}
+
+[data-bs-theme="gradient"] .table.select-table thead th {
+    background-color: var(--bs-primary) !important;
+    color: #fff !important;
+    border: 1px solid #d0d0d0;
+}
+
+[data-bs-theme="gradient"] .table tbody tr:hover {
+    background-color: #ffcc0132 !important;
+}
+
+[data-bs-theme="gradient"] .table.select-table img {
+    filter: none;
+}
+
+/* ===================================================== */
+/* ===================== DROPDOWNS ===================== */
+/* ===================================================== */
+[data-bs-theme="gradient"] .dropdown-menu {
+    background-color: var(--bs-dropdown-bg) !important;
+    color: var(--bs-dropdown-color) !important;
+    border-color: #dee2e6 !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+[data-bs-theme="gradient"] .dropdown-item {
+    color: #212529 !important;
+}
+
+[data-bs-theme="gradient"] .dropdown-item:hover {
+    background-color: var(--bs-primary) !important;
+    color: #fff !important;
+}
+
+/* ======================================================= */
+/* ===================== FORM INPUTS ===================== */
+/* ======================================================= */
+[data-bs-theme="gradient"] input,
+[data-bs-theme="gradient"] select,
+[data-bs-theme="gradient"] textarea {
+    background-color: #ffffff !important;
+    color: #212529 !important;
+    border-color: #dee2e6 !important;
+}
+
+[data-bs-theme="gradient"] input:focus,
+[data-bs-theme="gradient"] select:focus,
+[data-bs-theme="gradient"] textarea:focus {
+    border-color: var(--bs-primary) !important;
+    box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25) !important;
+}
+
+[data-bs-theme="gradient"] input::placeholder,
+[data-bs-theme="gradient"] textarea::placeholder {
+    color: #6c757d !important;
+}
+
+/* ================================================================ */
+/* ===================== PROGRESS BAR & BADGE ===================== */
+/* ================================================================ */
+[data-bs-theme="gradient"] .progress {
+    background-color: #e9ecef !important;
+}
+
+[data-bs-theme="gradient"] .progress-bar.bg-success {
+    background-color: var(--bs-success) !important;
+}
+
+[data-bs-theme="gradient"] .badge-secondary {
+    background-color: var(--bs-secondary) !important;
+    color: #fff !important;
+}
+
+/* Footer gradient mode */
+[data-bs-theme="gradient"] .footer {
+    background: var(--bs-primary) !important;
+    color: var(--bs-accent) !important;
+    border-top: 1px solid var(--bs-accent) !important;
+}
+
+[data-bs-theme="gradient"] .footer span.kemenkum {
+    color: var(--bs-accent) !important;
+}
+
+/* ================================================= */
+/* ===================== MODAL ===================== */
+/* ================================================= */
+[data-bs-theme="gradient"] .modal-content {
+    background: #ffffff !important;
+    color: var(--bs-body-color) !important;
+    border-color: #dee2e6 !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+[data-bs-theme="gradient"] .modal-body,
+[data-bs-theme="gradient"] .modal-footer {
+    background: var(--bs-bg-dropdown-gd) !important;
+    color: var(--bs-body-color) !important;
+    border-color: var(--bs-primary) !important;
+}
+
+[data-bs-theme="gradient"] .modal-header {
+    background: var(--bs-bg-navbar-gd) !important;
+    color: var(--bs-accent) !important;
+    border-color: var(--bs-primary) !important;
+}
+
+
+[data-bs-theme="gradient"] .btn-close {
+    filter: none !important;
+}
+
+/* ======================================================= */
+/* ===================== FORM & CARD ===================== */
+/* ======================================================= */
+[data-bs-theme="gradient"] .card {
+    background: var(--bs-card-bg-gd) !important;
+    border-color: #dee2e6 !important;
+    color: var(--bs-body-color) !important;
+    box-shadow: var(--bs-shadow);
+}
+
+[data-bs-theme="gradient"] .card:hover {
+    border-color: #1d26506d !important;
+    box-shadow: var(--bs-shadow-hover);
+}
+
+[data-bs-theme="gradient"] .card-title {
+    color: #212529 !important;
+}
+
+/* Input & Select */
+[data-bs-theme="gradient"] .form-control,
+[data-bs-theme="gradient"] .form-select {
+    background-color: #ffffff !important;
+    border-color: #dee2e6 !important;
+    color: #212529 !important;
+}
+
+[data-bs-theme="gradient"] .form-control:focus,
+[data-bs-theme="gradient"] .form-select:focus {
+    background-color: #ffffff !important;
+    border-color: var(--bs-primary) !important;
+    color: #212529 !important;
+    box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25) !important;
+}
+
+/* Label */
+[data-bs-theme="gradient"] .form-label {
+    color: #495057 !important;
+}
+
+/* ======================================================= */
+/* ===================== MODERN FORM ===================== */
+/* ======================================================= */
+[data-bs-theme="gradient"] .modern-form-card,
+[data-bs-theme="gradient"] .modern-list-card,
+[data-bs-theme="gradient"] .modern-news-card {
+    background: var(--bs-card-bg-gd) !important;
+    color: #212529 !important;
+    border: 1px solid #dee2e6 !important;
+    box-shadow: var(--bs-shadow);
+}
+
+[data-bs-theme="gradient"] .card h4,
+[data-bs-theme="gradient"] .card h5 {
+    background: transparent !important;
+    color: #1d2650;
+}
+
+[data-bs-theme="gradient"] .modern-form-card:hover,
+[data-bs-theme="gradient"] .modern-list-card:hover,
+[data-bs-theme="gradient"] .modern-news-card:hover {
+    border-color: var(--bs-primary) !important;
+    box-shadow: var(--bs-shadow-hover);
+}
+
+[data-bs-theme="gradient"] .modern-form-card .card-title,
+[data-bs-theme="gradient"] .modern-list-card .card-title {
+    color: #212529 !important;
+}
+
+/* Input & Select versi modern */
+[data-bs-theme="gradient"] .modern-input,
+[data-bs-theme="gradient"] .modern-select {
+    background-color: #ffffff !important;
+    border-color: #dee2e6 !important;
+    color: #212529 !important;
+}
+
+[data-bs-theme="gradient"] .modern-input:focus,
+[data-bs-theme="gradient"] .modern-select:focus {
+    background-color: #ffffff !important;
+    border-color: var(--bs-primary) !important;
+    color: #212529 !important;
+    box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25) !important;
+}
+
+/* ==================================================== */
+/* ===================== NAV TABS ===================== */
+/* ==================================================== */
+[data-bs-theme="gradient"] .main-panel,
+[data-bs-theme="gradient"] .content-wrapper {
+    color: #212529 !important;
+}
+
+[data-bs-theme="gradient"] .nav-tabs {
+    border-bottom: 1px solid #dee2e6 !important;
+}
+
+[data-bs-theme="gradient"] .nav-tabs .nav-link {
+    color: #212529 !important;
+    background-color: #ffffff;
+    border: 1px solid transparent;
+}
+
+[data-bs-theme="gradient"] .nav-tabs .nav-link:hover {
+    background: var(--bs-primary-3gd) !important;
+    color: var(--bs-accent) !important;
+}
+
+[data-bs-theme="gradient"] .nav-tabs .nav-link.active {
+    color: var(--bs-primary ) !important;
+    background: rgba(128, 128, 128, 0.308) !important;
+    border-color: var(--bs-primary) var(--bs-primary) transparent !important;
+}
+
+/* ========================================================== */
+/* ===================== BUTTON WRAPPER ===================== */
+/* ========================================================== */
+
+/* ====================================== */
+/* =============== BUTTON =============== */
+/* ====================================== */
+[data-bs-theme="gradient"] .btn-wrapper .btn {
+    color: #212529 !important;
+    border-color: #dee2e6 !important;
+}
+
+[data-bs-theme="gradient"] .btn-wrapper .btn:hover {
+    background-color: var(--bs-primary) !important;
+    color: #fff !important;
+    border-color: var(--bs-primary) !important;
+}
+
+/* ============================================== */
+/* =============== BUTTON PRIMARY =============== */
+/* ============================================== */
+[data-bs-theme="gradient"] .btn-wrapper .btn.btn-primary {
+    background-color: var(--bs-primary-3gd) !important;
+    border-color: var(--bs-primary) !important;
+    color: var(--bs-accent) !important;
+}
+
+[data-bs-theme="gradient"] .btn-wrapper .btn.btn-primary:hover {
+    background: var(--bs-accent-gd-hv) !important;
+    color: var(--bs-primary) !important;
+    border-color: none !important;
+}
+
+/* =================================================== */
+/* =============== BUTTON OUTLINE DARK =============== */
+/* =================================================== */
+[data-bs-theme="gradient"] .btn-wrapper .btn.btn-outline-dark {
+    background-color: transparent !important;
+    color: #212529 !important;
+    border-color: #212529 !important;
+}
+
+[data-bs-theme="gradient"] .btn-wrapper .btn.btn-outline-dark:hover {
+    background-color: #212529 !important;
+    color: #fff !important;
+    border-color: #212529 !important;
+}
+
+/* ====================================================== */
+/* =============== BUTTON OUTLINE WARNING =============== */
+/* ====================================================== */
+[data-bs-theme="gradient"] .btn-outline-warning {
+    background-color: transparent !important;
+    color: var(--bs-accent) !important;
+    border: 2px solid var(--bs-accent) !important;
+    border-radius: 12px;
+    padding: 0.6rem 1.4rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+[data-bs-theme="gradient"] .btn-outline-warning:hover {
+    background-color: var(--bs-accent) !important;
+    color: #000 !important;
+    border-color: var(--bs-accent) !important;
+    filter: brightness(1.1);
+    box-shadow: 0 6px 18px rgba(255, 255, 255, 0.25);
+}
+
+/* =========================================================== */
+/* ===================== PROFILE SECTION ===================== */
+/* =========================================================== */
+[data-bs-theme="gradient"] .profile-section {
+    background-color: #f8f9fa !important;
+    color: #212529 !important;
+}
+
+/* Header Profil */
+[data-bs-theme="gradient"] .profile-header h2,
+[data-bs-theme="gradient"] .profile-content h3,
+[data-bs-theme="gradient"] .profile-header p {
+    color: #212529 !important;
+}
+
+/* Card Profil */
+[data-bs-theme="gradient"] .profile-card {
+    background: #ffffff !important;
+    border: 1px solid #dee2e6 !important;
+    border-radius: 10px;
+    box-shadow: var(--bs-shadow);
+    color: #212529 !important;
+}
+
+[data-bs-theme="gradient"] .profile-card:hover {
+    border-color: var(--bs-primary) !important;
+    box-shadow: var(--bs-shadow-hover);
+}
+
+/* Header Card */
+[data-bs-theme="gradient"] .profile-card .card-header {
+    background-color: var(--bs-primary) !important;
+    border-bottom: 1px solid var(--bs-primary) !important;
+    color: #fff !important;
+    padding: 10px 15px;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Body Card */
+[data-bs-theme="gradient"] .profile-card .card-body {
+    background: #ffffff !important;
+    color: #212529 !important;
+}
+
+/* Special Danger Card (Hapus Akun) */
+[data-bs-theme="gradient"] .profile-card.danger {
+    background: #fff5f5 !important;
+    border: 1px solid #f5c6cb !important;
+}
+
+[data-bs-theme="gradient"] .profile-card.danger:hover {
+    border-color: #dc3545 !important;
+}
+
+[data-bs-theme="gradient"] .profile-card.danger .card-header {
+    background-color: #dc3545 !important;
+    color: #fff !important;
+}
+
+/* ========================================================= */
+/* ===================== PASSWORD FORM ===================== */
+/* ========================================================= */
+[data-bs-theme="gradient"] #password-form {
+    background: #ffffff;
+    color: #212529;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #dee2e6;
+    box-shadow: var(--bs-shadow);
+}
+
+/* Form group label */
+[data-bs-theme="gradient"] #password-form .form-group label {
+    color: #212529;
+}
+
+/* Input field */
+[data-bs-theme="gradient"] #password-form .input-with-icon input {
+    background-color: #ffffff;
+    color: #212529;
+    border: 1px solid #dee2e6;
+}
+
+[data-bs-theme="gradient"] #password-form .input-with-icon input:focus {
+    border-color: var(--bs-primary);
+    box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
+}
+
+/* Icon inside input */
+[data-bs-theme="gradient"] #password-form .input-with-icon i {
+    color: #6c757d;
+}
+
+/* Toggle password button */
+[data-bs-theme="gradient"] #password-form .toggle-password {
+    background-color: var(--bs-primary);
+    color: #fff;
+    border: none;
+}
+
+[data-bs-theme="gradient"] #password-form .toggle-password:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+/* Password strength bar */
+[data-bs-theme="gradient"] #password-form .strength-meter {
+    background-color: #e9ecef;
+    border-radius: 5px;
+}
+
+[data-bs-theme="gradient"] #password-form .strength-bar {
+    background-color: var(--bs-success);
+}
+
+/* Error messages */
+[data-bs-theme="gradient"] #password-form .error-message {
+    color: #dc3545;
+}
+
+/* Submit button */
+[data-bs-theme="gradient"] #password-form .save-btn {
+    background-color: var(--bs-primary);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+[data-bs-theme="gradient"] #password-form .save-btn:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+/* ======================================================== */
+/* ===================== PROFILE FORM ===================== */
+/* ======================================================== */
+[data-bs-theme="gradient"] #profile-info-form {
+    background: #ffffff;
+    color: #212529;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #dee2e6;
+    box-shadow: var(--bs-shadow);
+}
+
+/* Form group label */
+[data-bs-theme="gradient"] #profile-info-form .form-group label {
+    color: #212529;
+}
+
+/* Input fields */
+[data-bs-theme="gradient"] #profile-info-form .input-with-icon input {
+    background-color: #ffffff;
+    color: #212529;
+    border: 1px solid #dee2e6;
+}
+
+[data-bs-theme="gradient"] #profile-info-form .input-with-icon input:focus {
+    border-color: var(--bs-primary);
+    box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
+}
+
+/* Input icons */
+[data-bs-theme="gradient"] #profile-info-form .input-with-icon i {
+    color: #6c757d;
+}
+
+/* Foto preview */
+[data-bs-theme="gradient"] #profile-info-form .photo-preview {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 50%;
+}
+
+[data-bs-theme="gradient"] #profile-info-form .photo-preview:hover {
+    border-color: var(--bs-primary);
+}
+
+/* Error messages */
+[data-bs-theme="gradient"] #profile-info-form .error-message {
+    color: #dc3545;
+}
+
+/* Submit button */
+[data-bs-theme="gradient"] #profile-info-form .save-btn {
+    background-color: var(--bs-primary);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+[data-bs-theme="gradient"] #profile-info-form .save-btn:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+/* ========================================================== */
+/* ===================== DELETE ACCOUNT ===================== */
+/* ========================================================== */
+[data-bs-theme="gradient"] #delete-account-form {
+    background: #ffffff;
+    color: #212529;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #dee2e6;
+    box-shadow: var(--bs-shadow);
+}
+
+/* Warning box */
+[data-bs-theme="gradient"] #delete-account-form .warning-box {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-left: 5px solid #dc3545;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+[data-bs-theme="gradient"] #delete-account-form .warning-box i {
+    font-size: 1.5rem;
+    color: #dc3545;
+}
+
+/* Form group label */
+[data-bs-theme="gradient"] #delete-account-form .form-group label {
+    color: #212529;
+}
+
+/* Input fields */
+[data-bs-theme="gradient"] #delete-account-form .input-with-icon input {
+    background-color: #ffffff;
+    color: #212529;
+    border: 1px solid #dee2e6;
+}
+
+[data-bs-theme="gradient"] #delete-account-form .input-with-icon input:focus {
+    border-color: var(--bs-primary);
+    box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
+}
+
+/* Input icons */
+[data-bs-theme="gradient"] #delete-account-form .input-with-icon i {
+    color: #6c757d;
+}
+
+/* Error messages */
+[data-bs-theme="gradient"] #delete-account-form .error-message {
+    color: #dc3545;
+}
+
+/* Delete button */
+[data-bs-theme="gradient"] #delete-account-form .delete-btn {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+[data-bs-theme="gradient"] #delete-account-form .delete-btn:hover {
+    background-color: #c82333;
+}
+
+/* Modal */
+[data-bs-theme="gradient"] #delete-confirm-modal .modal-content {
+    background: #ffffff;
+    color: #212529;
+    border-radius: 10px;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+[data-bs-theme="gradient"] #delete-confirm-modal .modal-header,
+[data-bs-theme="gradient"] #delete-confirm-modal .modal-body,
+[data-bs-theme="gradient"] #delete-confirm-modal .modal-footer {
+    color: #212529;
+}
+
+[data-bs-theme="gradient"] #delete-confirm-modal .cancel-btn {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+[data-bs-theme="gradient"] #delete-confirm-modal .confirm-delete-btn {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+[data-bs-theme="gradient"] #delete-confirm-modal .cancel-btn:hover {
+    background-color: #5a6268;
+}
+
+[data-bs-theme="gradient"] #delete-confirm-modal .confirm-delete-btn:hover {
+    background-color: #c82333;
+}
+
+/* ==================================================================== */
+/* ===================== ADDITIONAL HOVER EFFECTS ===================== */
+/* ==================================================================== */
+[data-bs-theme="gradient"] .list-group-item {
+    background-color: #ffffff !important;
+    border-color: #dee2e6 !important;
+    color: #212529 !important;
+}
+
+[data-bs-theme="gradient"] .list-group-item:hover {
+    background-color: rgba(0, 123, 255, 0.1) !important;
+    border-color: var(--bs-primary) !important;
+}
+
+[data-bs-theme="gradient"] .pagination .page-link {
+    background-color: #ffffff !important;
+    border-color: #dee2e6 !important;
+    color: #212529 !important;
+}
+
+[data-bs-theme="gradient"] .pagination .page-link:hover {
+    background-color: var(--bs-primary) !important;
+    color: #fff !important;
+    border-color: var(--bs-primary) !important;
+}
+
+[data-bs-theme="gradient"] .pagination .page-item.active .page-link {
+    background-color: var(--bs-primary) !important;
+    border-color: var(--bs-primary) !important;
+    color: #fff !important;
+}
+
+[data-bs-theme="gradient"] .alert {
+    background-color: #ffffff !important;
+    border-color: #dee2e6 !important;
+    color: #212529 !important;
+}
+
+[data-bs-theme="gradient"] .alert-success {
+    background-color: #d4edda !important;
+    border-color: #c3e6cb !important;
+    color: #155724 !important;
+}
+
+[data-bs-theme="gradient"] .alert-danger {
+    background-color: #f8d7da !important;
+    border-color: #f5c6cb !important;
+    color: #721c24 !important;
+}
+
+[data-bs-theme="gradient"] .alert-info {
+    background-color: #d1ecf1 !important;
+    border-color: #bee5eb !important;
+    color: #0c5460 !important;
+}
+
+[data-bs-theme="gradient"] .breadcrumb {
+    background-color: #e9ecef !important;
+}
+
+[data-bs-theme="gradient"] .breadcrumb-item a {
+    color: var(--bs-primary) !important;
+}
+
+[data-bs-theme="gradient"] .breadcrumb-item a:hover {
+    color: #0056b3 !important;
+}
+
+[data-bs-theme="gradient"] .breadcrumb-item.active {
+    color: #6c757d !important;
+}
+
+/* Search & Filter Elements */
+[data-bs-theme="gradient"] .search-wrapper {
+    background-color: #ffffff !important;
+    border-color: #dee2e6 !important;
+}
+
+[data-bs-theme="gradient"] .search-wrapper:hover {
+    border-color: var(--bs-primary) !important;
+}
+
+[data-bs-theme="gradient"] .filter-btn {
+    background-color: var(--bs-primary) !important;
+    color: #fff !important;
+    border-color: var(--bs-primary) !important;
+}
+
+[data-bs-theme="gradient"] .filter-btn:hover {
+    background-color: #0056b3 !important;
+    color: #fff !important;
+    border-color: #0056b3 !important;
+}
+
+/* Status Badges */
+[data-bs-theme="gradient"] .badge-success {
+    background-color: var(--bs-success) !important;
+    color: #fff !important;
+}
+
+[data-bs-theme="gradient"] .badge-warning {
+    background-color: #ffc107 !important;
+    color: #000 !important;
+}
+
+[data-bs-theme="gradient"] .badge-danger {
+    background-color: #dc3545 !important;
+    color: #fff !important;
+}
+
+[data-bs-theme="gradient"] .badge-info {
+    background-color: var(--bs-info) !important;
+    color: #fff !important;
+}
+
+/* Tooltip & Popover */
+[data-bs-theme="gradient"] .tooltip .tooltip-inner {
+    background-color: #212529 !important;
+    color: #fff !important;
+}
+
+[data-bs-theme="gradient"] .popover {
+    background-color: #ffffff !important;
+    border-color: #dee2e6 !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+[data-bs-theme="gradient"] .popover-header {
+    background-color: var(--bs-primary) !important;
+    color: #fff !important;
+}
+
+[data-bs-theme="gradient"] .popover-body {
+    color: #212529 !important;
+}
+
+/* Accordion */
+[data-bs-theme="gradient"] .accordion-item {
+    background-color: #ffffff !important;
+    border-color: #dee2e6 !important;
+}
+
+[data-bs-theme="gradient"] .accordion-button {
+    background-color: #f8f9fa !important;
+    color: #212529 !important;
+}
+
+[data-bs-theme="gradient"] .accordion-button:not(.collapsed) {
+    background-color: var(--bs-primary) !important;
+    color: #fff !important;
+}
+
+[data-bs-theme="gradient"] .accordion-button:hover {
+    background-color: var(--bs-primary) !important;
+    color: #fff !important;
+}
+
+[data-bs-theme="gradient"] .accordion-body {
+    background-color: #ffffff !important;
+    color: #212529 !important;
+}
+
+/* Card gradient Mode */
+[data-bs-theme="gradient"] .card {
+    background-color: #ffffff !important;
+    color: #212529 !important;
+    border: 1px solid #dee2e6 !important;
+    border-radius: 12px;
+    box-shadow: var(--bs-shadow);
+}
+
+[data-bs-theme="gradient"] .card:hover {
+    border: 2px solid var(--bs-primary);
+    box-shadow: var(--bs-shadow-hover);
+}
+
+/* Card Title */
+[data-bs-theme="gradient"] .card-title {
+    color: #212529 !important;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Info List */
+[data-bs-theme="gradient"] .info-list dt {
+    color: #6c757d !important;
+    font-weight: 500;
+}
+
+[data-bs-theme="gradient"] .info-list dd {
+    color: #212529 !important;
+}
+
+/* Badge Outline dalam gradient Mode */
+[data-bs-theme="gradient"] .badge-outline-danger {
+    color: #dc3545 !important;
+    border: 1px solid #dc3545 !important;
+    background: transparent !important;
+}
+/* ============================================================== */
+/* ===================== SMOOTH TRANSITIONS ===================== */
+/* ============================================================== */
+[data-bs-theme="gradient"] * {
+    transition: all 0.3s ease;
+}
+
+[data-bs-theme="gradient"] .form-control,
+[data-bs-theme="gradient"] .form-select {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ======================================================================= */
+/* ===================== MODERN GLASSMORPHISM EFFECT ===================== */
+/* ======================================================================= */
+[data-bs-theme="gradient"] .glass-card {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37) !important;
+}
+
+/* ===================== GRADIENT BACKGROUNDS ===================== */
+[data-bs-theme="gradient"] .gradient-header {
+    background: linear-gradient(135deg, var(--bs-primary) 0%, #0056b3 100%) !important;
+    color: #fff !important;
+}
+
+[data-bs-theme="gradient"] .gradient-card {
+    background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%) !important;
+    border: 1px solid #dee2e6 !important;
+}
+
+/* ===================== ENHANCED FORM STYLING ===================== */
+[data-bs-theme="gradient"] .modern-form .form-floating>label {
+    color: #6c757d;
+}
+
+[data-bs-theme="gradient"] .modern-form .form-floating>.form-control:focus~label,
+[data-bs-theme="gradient"] .modern-form .form-floating>.form-control:not(:placeholder-shown)~label {
+    color: var(--bs-primary);
+}
+
+[data-bs-theme="gradient"] .modern-form .form-control {
+    border-radius: 12px;
+    padding: 12px 16px;
+    border: 2px solid #e9ecef;
+    background-color: #ffffff;
+}
+
+[data-bs-theme="gradient"] .modern-form .form-control:focus {
+    border-color: var(--bs-primary);
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.1);
+    background-color: #ffffff;
+}
+
+/* ===================== RESPONSIVE ENHANCEMENTS ===================== */
+@media (max-width: 768px) {
+    [data-bs-theme="gradient"] .card {
+        margin-bottom: 1rem;
+        border-radius: 8px;
+    }
+
+    [data-bs-theme="gradient"] .btn {
+        font-size: 0.875rem;
+        padding: 0.5rem 1rem;
+    }
+
+    [data-bs-theme="gradient"] .modal-dialog {
+        margin: 0.5rem;
+    }
+}
+
+/* ===================== PRINT STYLES ===================== */
+@media print {
+
+    [data-bs-theme="gradient"] .card,
+    [data-bs-theme="gradient"] .table {
+        box-shadow: none !important;
+        border: 1px solid #000 !important;
+    }
+
+    [data-bs-theme="gradient"] .btn {
+        border: 1px solid #000 !important;
+        background: white !important;
+        color: black !important;
+    }
+}
+
+/* =========================================================== */
+/* ======================= GEAR BUBBLE ======================= */
+/* =========================================================== */
+
+[data-bs-theme="gradient"] .gear-bubble-wrapper .gear-bubble {
+    background: var(--bs-accent-gd) !important;
+}
+
+/* Gear Icon */
+[data-bs-theme="gradient"] .gear-bubble-wrapper .gear-bubble i.fa-gear {
+    color: var(--bs-primary) !important;
+}
+
+/* ======= Popup gear ======= */
+
+/* popup header */
+[data-bs-theme="gradient"] .gear-bubble-wrapper .gear-popup .popup-header {
+    background: var(--bs-bg-navbar-gd) !important;
+    color: var(--bs-accent) !important;
+    text-decoration: underline !important;
+}
+
+[data-bs-theme="gradient"] .gear-bubble-wrapper .gear-popup .popup-header button {
+    color: var(--bs-danger) !important;
+}
+
+/* popup body */
+[data-bs-theme="gradient"] .gear-bubble-wrapper .gear-popup .popup-body,
+[data-bs-theme="gradient"] .gear-bubble-wrapper .gear-popup .popup-body .popup-item .theme-option {
+    background: var(--bs-bg-dropdown-gd) !important;
+    color: var(--bs-primary) !important;
+}
+
+/* button close */
+[data-bs-theme="gradient"] .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%) !important;
+}

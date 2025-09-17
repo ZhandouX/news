@@ -1,0 +1,134 @@
+/* ====== DASHBOARD NEWS CARD ====== */
+.dash-news-card {
+    display: flex;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid #f0f0f0;
+}
+
+.dash-news-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+.dash-news-card .news-img img {
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.dash-news-card .news-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.dash-news-card .news-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2d2f3a;
+    margin-bottom: 4px;
+
+    /* truncate jadi 1 baris */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dash-news-card .news-date {
+    font-size: 0.8rem;
+    color: #888;
+    margin-bottom: 6px;
+}
+
+.dash-news-card .news-desc {
+    font-size: 0.85rem;
+    color: #555;
+    margin-bottom: 0;
+
+    /* truncate jadi 2 baris */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Container pagination */
+.pagination-container nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+/* Tambahkan jarak antar tombol */
+.pagination-container .pagination {
+    gap: 4px;
+}
+
+/* Semua tombol pagination */
+.pagination-container .page-link {
+    border-radius: 6px !important;
+    margin: 0 2px;
+    font-size: 0.85rem;
+    padding: 4px 10px;
+    color: #4e73df;
+    transition: background 0.2s;
+}
+
+/* Aktif */
+.pagination-container .page-item.active .page-link {
+    background-color: #4e73df;
+    border-color: #4e73df;
+    color: #fff;
+}
+
+/* Hover */
+.pagination-container .page-item .page-link:hover {
+    background-color: #f1f5ff;
+}
+
+/* Dark mode */
+:root[data-bs-theme="dark"] .pagination-container .page-link {
+    color: #6ca8ff;
+    background: #2a2a3c;
+    border: 1px solid #3b3b4f;
+}
+
+:root[data-bs-theme="dark"] .pagination-container .page-item.active .page-link {
+    background-color: #6ca8ff;
+    border-color: #6ca8ff;
+    color: #fff;
+}
+
+/* Prev & Next khusus */
+.pagination-container .page-item:first-child .page-link,
+/* Prev */
+.pagination-container .page-item:last-child .page-link {
+    /* Next */
+    font-size: 0.8rem;
+    padding: 4px 8px;
+    min-width: 70px;
+    /* biar ukuran seragam */
+    text-align: center;
+}
+
+/* ====== Dark Mode ====== */
+:root[data-bs-theme="dark"] .dash-news-card {
+    background: #2a2a3c;
+    border: 1px solid #3b3b4f;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+}
+
+:root[data-bs-theme="dark"] .dash-news-card .news-title {
+    color: #f0f0f0;
+}
+
+:root[data-bs-theme="dark"] .dash-news-card .news-date {
+    color: #aaa;
+}
+
+:root[data-bs-theme="dark"] .dash-news-card .news-desc {
+    color: #cfcfcf;
+}
