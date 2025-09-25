@@ -6,6 +6,12 @@ use App\Http\Controllers\Admin\OfficerManagementController;
 use App\Http\Controllers\Admin\SuperAdminNewsController;
 use App\Http\Controllers\Admin\SuperAdminNewsFilterController;
 use App\Http\Controllers\Admin\SuperAdminNewsReportController;
+use App\Http\Controllers\MediaSosial\FacebookController;
+use App\Http\Controllers\MediaSosial\InstagramController;
+use App\Http\Controllers\MediaSosial\TiktokController;
+use App\Http\Controllers\MediaSosial\TwitterController;
+use App\Http\Controllers\MediaSosial\WebsiteController;
+use App\Http\Controllers\MediaSosial\YoutubeController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
@@ -91,6 +97,16 @@ Route::prefix('super-admin')->name('super-admin.')->middleware(['auth', 'verifie
     Route::get('admins/{user}/edit', [OfficerManagementController::class, 'editAdmin'])->name('admins.edit');
     Route::put('admins/{user}', [OfficerManagementController::class, 'updateAdmin'])->name('admins.update');
     Route::delete('admins/{user}', [OfficerManagementController::class, 'destroyAdmin'])->name('admins.destroy');
+
+    /* ======================================== */
+    /* ========== MEDIA SOSIAL ROUTE ========== */
+    /* ======================================== */
+    Route::resource('youtube', YoutubeController::class);
+    Route::resource('instagram', InstagramController::class);
+    Route::resource('facebook', FacebookController::class);
+    Route::resource('twitter', TwitterController::class);
+    Route::resource('tiktok', TiktokController::class);
+    Route::resource('website', WebsiteController::class);
 });
 
 

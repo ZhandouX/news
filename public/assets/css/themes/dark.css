@@ -588,6 +588,31 @@
     color: var(--bs-primary) !important;
 }
 
+[data-bs-theme="dark"] .sidebar .nav .nav-item .nav-link i.mdi-youtube {
+    color: red !important;
+}
+
+[data-bs-theme="dark"] .sidebar .nav .nav-item .nav-link i.mdi-instagram {
+    color: rgb(228, 64, 95) !important;
+}
+
+[data-bs-theme="dark"] .sidebar .nav .nav-item .nav-link i.fa-tiktok {
+    color: rgb(255, 179, 215) !important;
+}
+
+[data-bs-theme="dark"] .sidebar .nav .nav-item .nav-link i.mdi-twitter {
+    color: rgb(29, 161, 242) !important;
+}
+
+[data-bs-theme="dark"] .sidebar .nav .nav-item .nav-link i.mdi-facebook {
+    color: rgb(24, 119, 242) !important;
+}
+
+[data-bs-theme="dark"] .sidebar .nav .nav-item .nav-link i.mdi-web {
+    color: rgb(107, 114, 128) !important;
+}
+
+
 /* =================================================== */
 /* ====================== CARDS ====================== */
 /* =================================================== */
@@ -979,7 +1004,11 @@
     background-color: var(--bs-primary) !important;
 }
 
-/* REPORT TABLE */
+[data-bs-theme="dark"] .stretch-card .card .card-body .table-responsive .table-secondary .grup-sumber {
+    background: var(--bs-primary) !important;
+    color: var(--bs-accent) !important;
+    font-size: 14px !important;
+}
 
 /* ===================================================== */
 /* ===================== DROPDOWNS ===================== */
@@ -2139,4 +2168,15 @@
     background: #1e1e2d !important;
     box-shadow: none !important;
     border: none !important;
+}
+/* ============================ */
+/* ======= MEDIA SOSIAL ICON ======= */
+/* ============================ */
+
+[data-bs-theme="dark"] .news-create-card .card-container .header-create-card i.mdi-youtube {
+    color: red !important;
+}
+
+[data-bs-theme="dark"] .news-create-card .card-container .header-create-card i.mdi-instagram {
+    color: rgb(228, 64, 95) !important;
 }

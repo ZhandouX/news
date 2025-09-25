@@ -16,58 +16,72 @@ class NewsRequest extends FormRequest
     // RULE UNTUK TABEL NEWS
     public function rules(): array
     {
-        $rules = [
+        return [
             'title' => [
                 'required',
                 'string',
                 'max:255',
+            ],
+
+            'news_date' => 'required|date',
+
+            'link_berita' => [
+                'nullable',
+                'url',
                 function ($attribute, $value, $fail) {
-                    $query = News::where('title', $value)
-                        ->where('news_date', $this->news_date);
+                    // Cek hanya jika link_berita tidak kosong
+                    if (!empty($value)) {
+                        $query = News::where('link_berita', $value)
+                            ->where('news_date', $this->news_date);
 
-                    // Exclude saat update
-                    if ($this->news) {
-                        $query->where('id', '!=', $this->news->id);
-                    }
+                        // Jika update, exclude data yang sedang diupdate
+                        if ($this->news) {
+                            $query->where('id', '!=', $this->news->id);
+                        }
 
-                    if ($query->exists()) {
-                        $fail('Berita dengan judul dan tanggal ini sudah ada.');
+                        if ($query->exists()) {
+                            $fail('Berita dengan link dan tanggal yang sama sudah ada.');
+                        }
                     }
                 },
             ],
-            'news_date' => 'required|date',
+
             'content' => 'nullable|string',
+
             'category' => 'required|in:' . implode(',', News::getCategories()),
+
             'office' => [
                 'required',
                 Rule::in(News::getOfficeCategories()),
             ],
+
             'office_other' => function ($attribute, $value, $fail) {
                 if ($this->office === 'Other' && empty($value)) {
                     $fail('Nama kantor lainnya wajib diisi jika memilih Other.');
                 }
             },
+
             'sumber' => [
                 'required',
                 Rule::in(News::getSumberCategories()),
             ],
+
             'sumber_other' => function ($attribute, $value, $fail) {
                 if ($this->sumber === 'Other' && empty($value)) {
                     $fail('Nama Sumber lainnya wajib diisi jika memilih Other.');
                 }
             },
+
             'link_sumber_other' => function ($attribute, $value, $fail) {
                 if ($this->sumber === 'Other' && empty($value)) {
                     $fail('Link sumber wajib diisi jika memilih sumber lainnya.');
                 }
             },
-            'link_berita' => ['nullable', 'url'],
+
             'cover_image' => $this->isMethod('post')
                 ? 'nullable|image|mimes:jpeg,png,jpg,gif|max:10240'
                 : 'nullable|image|mimes:jpeg,png,jpg,gif|max:10240',
         ];
-
-        return $rules;
     }
 
     // PESAN UNTUK WAJIB MENGISI DATA YANG HARUS WAJIB DIISI

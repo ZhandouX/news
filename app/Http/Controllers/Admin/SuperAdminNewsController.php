@@ -21,43 +21,86 @@ class SuperAdminNewsController extends Controller
     /* INDEX */
     public function index(Request $request)
     {
-        // Statistik bulanan (Postgres pakai TO_CHAR)
-        $newsPerMonth = News::selectRaw("TO_CHAR(news_date, 'YYYY-MM') as month, COUNT(*) as count")
-            ->groupBy('month')
+        // Ambil bulan dan tahun dari request (atau default sekarang)
+        $currentYear = Carbon::now()->year;
+        $currentMonth = Carbon::now()->month;
+
+        // Tentukan halaman saat ini dari request
+        $currentPage = $request->get('periode', 1); // default page 1
+
+        // Hitung batas bulan per halaman
+        // contoh:
+        // Halaman 1 = Jan-Jun
+        // Halaman 2 = Jul-Des
+        $monthsPerPage = 6;
+
+        // Tentukan start dan end bulan berdasarkan halaman
+        $startMonth = ($currentPage - 1) * $monthsPerPage + 1;
+        $endMonth = $startMonth + $monthsPerPage - 1;
+
+        // Range tanggal
+        $startDate = Carbon::create($currentYear, $startMonth, 1)->startOfMonth();
+        $endDate = Carbon::create($currentYear, $endMonth, 1)->endOfMonth();
+
+        // Statistik bulanan per sumber
+        $newsPerMonth = News::selectRaw("TO_CHAR(news_date, 'YYYY-MM') as month, sumber, COUNT(*) as count")
+            ->whereBetween('news_date', [$startDate, $endDate])
+            ->groupBy('month', 'sumber')
             ->orderBy('month', 'asc')
+            ->orderBy('sumber', 'asc')
             ->get()
             ->map(function ($item) {
                 return [
                     'month' => $item->month,
                     'monthName' => Carbon::parse($item->month . '-01')->translatedFormat('F Y'),
-                    'count' => $item->count,
+                    'sumber' => $item->sumber,
+                    'count' => (int) $item->count,
                 ];
             })
-            ->keyBy('month'); // ✅ supaya bisa dipanggil langsung pakai key Y-m
+            ->groupBy('month');
 
-        // Data utama (pencarian & filter)
-        $news = News::when($request->q, fn($q) =>
-            $q->where('title', 'like', '%' . $request->q . '%'))
-            ->when($request->kategori, fn($q) =>
-                $q->where('category', $request->kategori))
-            ->when($request->sumber, fn($q) =>
-                $q->where('sumber', $request->sumber))
-            ->when($request->kantor, fn($q) =>
-                $q->where('office', $request->kantor))
-            ->when($request->date, fn($q) =>
-                $q->whereDate('news_date', $request->date)) // Single date
-            ->when($request->start_date && $request->end_date, fn($q) =>
-                $q->whereBetween('news_date', [$request->start_date, $request->end_date])) // Range
-            ->orderBy('news_date', 'desc')
-            ->paginate(10)
+        // Query utama berita sesuai filter
+        $query = News::query()
+            ->whereBetween('news_date', [$startDate, $endDate])
+            ->when($request->q, fn($q) => $q->where('title', 'like', '%' . $request->q . '%'))
+            ->when($request->kategori, fn($q) => $q->where('category', $request->kategori))
+            ->when($request->sumber, fn($q) => $q->where('sumber', $request->sumber))
+            ->when($request->kantor, fn($q) => $q->where('office', $request->kantor))
+            ->when(
+                $request->start_date && $request->end_date,
+                fn($q) => $q->whereBetween('news_date', [$request->start_date, $request->end_date])
+            );
+
+        // Paginate per berita dalam periode ini
+        $news = $query->orderBy('news_date', 'desc')
+            ->paginate(1000)
             ->withQueryString();
 
-        // Dropdown list
+        // Group berita per bulan -> per sumber
+        $groupedPageNews = $news->getCollection()
+            ->groupBy(fn($item) => Carbon::parse($item->news_date)->format('Y-m'))
+            ->map(fn($monthGroup) => $monthGroup->groupBy('sumber'));
+
+        // Ambil dropdown filter
         $categories = News::select('category')->distinct()->orderBy('category')->pluck('category');
         $sources = News::select('sumber')->distinct()->orderBy('sumber')->pluck('sumber');
         $offices = News::select('office')->distinct()->orderBy('office')->pluck('office');
 
-        return view('super-admin.news.index', compact('news', 'newsPerMonth', 'categories', 'sources', 'offices'));
+        // Hitung total periode dalam tahun ini
+        $totalPeriods = ceil(12 / $monthsPerPage); // misal 2 periode: Jan-Jun & Jul-Des
+
+        return view('super-admin.news.index', compact(
+            'news',
+            'groupedPageNews',
+            'newsPerMonth',
+            'categories',
+            'sources',
+            'offices',
+            'currentPage',
+            'totalPeriods',
+            'startDate',
+            'endDate'
+        ));
     }
 
     // DASHBOARD

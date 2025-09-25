@@ -51,7 +51,7 @@ class SuperAdminNewsReportController extends Controller
                         $image = $manager->read($path)
                             ->scale(width: 800)
                             ->toJpeg(70);
-                        
+
                         // Simpan ke folder cache
                         $cacheDir = storage_path('app/public/pdf-cache');
                         if (!file_exists($cacheDir)) {
@@ -147,7 +147,7 @@ class SuperAdminNewsReportController extends Controller
     // REKAP BERITA (BULAN)
     public function exportMonthlyReportByMonth(Request $request)
     {
-        $monthInput = $request->get('month'); // format "YYYY-MM"
+        $monthInput = $request->get('month'); // format: YYYY-MM
 
         if (!$monthInput) {
             return back()->with('error', 'Bulan dan filter harus dipilih.');
@@ -157,6 +157,7 @@ class SuperAdminNewsReportController extends Controller
         $year = (int) $year;
         $month = (int) ltrim($month, '0');
 
+        // Ambil berita berdasarkan bulan dan tahun
         $news = News::whereYear('news_date', $year)
             ->whereMonth('news_date', $month)
             ->orderBy('news_date', 'asc')
@@ -166,10 +167,10 @@ class SuperAdminNewsReportController extends Controller
             return back()->with('error', "Tidak ada berita pada bulan {$month}-{$year}.");
         }
 
-        // ✅ Inisialisasi Image Manager (pakai GD driver)
+        // ✅ Inisialisasi Image Manager dengan GD driver
         $manager = new ImageManager(new Driver());
 
-        // ✅ Kompres cover_image sebelum masuk ke PDF
+        // ✅ Kompres cover_image sebelum dimasukkan ke PDF
         foreach ($news as $item) {
             if ($item->cover_image) {
                 $path = storage_path("app/public/{$item->cover_image}");
@@ -190,10 +191,10 @@ class SuperAdminNewsReportController extends Controller
                         $tempPath = $cacheDir . "/news-{$item->id}.jpg";
                         $image->save($tempPath);
 
-                        // Simpan path baru
+                        // Simpan path baru agar bisa dipanggil di Blade
                         $item->compressed_image = "pdf-cache/news-{$item->id}.jpg";
                     } catch (\Exception $e) {
-                        // fallback → pakai original
+                        // Jika gagal kompresi, fallback pakai original
                         $item->compressed_image = $item->cover_image;
                     }
                 } else {
@@ -204,9 +205,10 @@ class SuperAdminNewsReportController extends Controller
             }
         }
 
+        // ✅ Format nama bulan
         $monthName = Carbon::createFromDate($year, $month, 1)->translatedFormat('F');
 
-        // ✅ generate PDF
+        // ✅ Generate PDF menggunakan Blade yang sudah grouping
         $pdf = Pdf::loadView('super-admin.news.format_pdf.monthly', [
             'news' => $news,
             'year' => $year,
@@ -214,7 +216,7 @@ class SuperAdminNewsReportController extends Controller
             'monthName' => $monthName,
         ])
             ->setPaper('A4', 'portrait')
-            ->setOption('dpi', 96) // turunkan DPI biar kecil
+            ->setOption('dpi', 96) // Turunkan DPI supaya ukuran file lebih kecil
             ->setOption('defaultFont', 'sans-serif');
 
         return $pdf->download("Rekap-Berita-{$monthName}-{$year}.pdf");
